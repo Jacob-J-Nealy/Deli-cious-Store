@@ -29,7 +29,7 @@ Each story has details for how I wanted to build an application intuitive, funct
 I'm excited to share how these User Stories guided the evolution of the application and brought the vision to life!
 
 🥪 1. As a customer, I want to choose my sandwich size so that I can get the right amount of food.
-      - Define size options (4", 8", 12")
+      * Define size options (4", 8", 12")
       - Create a Sandwich class with a size field
       - Prompt user for sandwich size during sandwich creation
       - Validate the size input
