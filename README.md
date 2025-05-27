@@ -29,39 +29,39 @@ Each story has details for how I wanted to build an application intuitive, funct
 I'm excited to share how these User Stories guided the evolution of the application and brought the vision to life!
 
 🥪 1. As a customer, I want to choose my sandwich size so that I can get the right amount of food.
-      * Define size options (4", 8", 12")
-      - Create a Sandwich class with a size field
-      - Prompt user for sandwich size during sandwich creation
-      - Validate the size input
+- Define size options (4", 8", 12")
+- Create a Sandwich class with a size field
+- Prompt user for sandwich size during sandwich creation
+- Validate the size input
 
 🍞 2. As a customer, I want to select a bread type so that I can enjoy the sandwich base I prefer.
-      - Define valid bread types (white, wheat, rye, wrap)
-      - Add a breadType field to Sandwich class
-      - Prompt user to select from available bread types
-      - Validate and set bread type in the sandwich object
+- Define valid bread types (white, wheat, rye, wrap)
+- Add a breadType field to Sandwich class
+- Prompt user to select from available bread types
+- Validate and set bread type in the sandwich object
 
 🧀 3. As a customer, I want to choose toppings (regular and premium) so that my sandwich is fully customized.
-      -  Create a list of available toppings (separated as regular vs premium)
-      - Allow user to choose multiple toppings
-      - Track whether a topping is selected as “extra”
-      - Add method to calculate premium charges
-      - Update Sandwich to store selected toppings
+- Create a list of available toppings (separated as regular vs premium)
+- Allow user to choose multiple toppings
+- Track whether a topping is selected as “extra”
+- Add method to calculate premium charges
+- Update Sandwich to store selected toppings
       
 🔥 4. As a customer, I want to choose whether to toast my sandwich so I can get it warm and crispy.
-      - Add a boolean field isToasted to Sandwich
-      - Prompt user: “Would you like your sandwich toasted?”
-      - Store the result in the sandwich object
+- Add a boolean field isToasted to Sandwich
+- Prompt user: “Would you like your sandwich toasted?”
+- Store the result in the sandwich object
     
 🧾 5. As a customer, I want to place an order with multiple sandwiches so I can order for myself or others.
-      - Create Order class with a list of Sandwich objects
-      - Allow user to add multiple sandwiches to a single order
-      - Loop the sandwich creation steps for each new sandwich
+- Create Order class with a list of Sandwich objects
+- Allow user to add multiple sandwiches to a single order
+- Loop the sandwich creation steps for each new sandwich
       
 💵 6. As a customer, I want to see a final receipt that shows my sandwich details and total cost, including extra charges.
-      - Implement a method in Order to calculate total price
-      - Include premium topping charges and size-based pricing
-      - Format the output with sandwich details and total
-      - Print the receipt when the user finishes the order
+- Implement a method in Order to calculate total price
+- Include premium topping charges and size-based pricing
+- Format the output with sandwich details and total
+- Print the receipt when the user finishes the order
 
 
 ## Setup (Generated)
