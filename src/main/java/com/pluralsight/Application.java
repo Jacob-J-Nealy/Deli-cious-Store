@@ -5,5 +5,6 @@ public class Application {
 
 
         UserInterface.uiHomeScreen();
+        UserInterface.uiNewOrderScreen();
     }
 }

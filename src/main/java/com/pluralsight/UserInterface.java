@@ -19,6 +19,7 @@ public class UserInterface {
 
                 case 1:
                     System.out.println("Opening New Order Menu...");
+                    uiNewOrderScreen();
                     break;
                 case 0:
                     System.out.println("_____________________________________________");
@@ -32,8 +33,7 @@ public class UserInterface {
 
         }
     }
-
-    public static int uiHomeScreenDisplay() {
+    public static int  uiHomeScreenDisplay() {
 
         try {
             int input = -1;
@@ -59,29 +59,71 @@ public class UserInterface {
     }
 
     public static void uiNewOrderScreen() {
+        boolean running = true;
 
+        while (running) {
+
+            // Display HomeScreen
+            int newOrderInput = UserInterface.uiNewOrderDisplay();
+
+            switch (newOrderInput) {
+
+                case 1:
+                    System.out.println("Opening Add Sandwich Menu...");
+                    break;
+                case 2:
+                    System.out.println("Opening Add Drinks Menu...");
+                    break;
+                case 3:
+                    System.out.println("Opening Add Chips Menu...");
+                    break;
+                case 4:
+                    System.out.println("Opening Checkout Screen");
+                case 0:
+                    System.out.println("_____________________________________________");
+                    System.out.println("Canceling Order...");
+                    running = false;
+                    break;
+                default:
+                    System.err.println("Incorrect Input. Returning to Home Screen...");
+                    break;
+            }
+
+        }
 
 
 
 
 
     }
+    public static int uiNewOrderDisplay() {
+        try {
+            int newOrderInput = -1;
 
-    public static void uiNewOrderDisplay() {
-        System.out.println("New Order Selection Screen");
-        System.out.println("_____________________________________________");
+            System.out.println("\nNew Order Selection Screen");
+            System.out.println("_____________________________________________");
 
-        System.out.println("What would you like to add to your Order?");
-        System.out.println("Choose an Option Below:\n");
+            System.out.println("What would you like to add to your Order?");
+            System.out.println("Choose an Option Below:\n");
 
-        System.out.println("1) Add Sandwich");
-        System.out.println("2) Add Drink");
-        System.out.println("3) Add Chips");
-        System.out.println("4) Checkout");
-        System.out.println("\n0) Cancel Order");
+            System.out.println("1) Add Sandwich");
+            System.out.println("2) Add Drink");
+            System.out.println("3) Add Chips");
+            System.out.println("4) Checkout");
+            System.out.println("\n0) Cancel Order");
+
+            System.out.print("\nInput Here: ");
+            newOrderInput = scanner.nextInt();
+            scanner.nextLine(); // scanner eater
+
+            return newOrderInput;
 
 
+        } catch (Exception e) {
+            System.err.println("Incorrect Input");
+        }
 
+        return 0;
     }
 
 
