@@ -63,51 +63,22 @@ public class UserInterface {
                 int newOrderInput = UserInterface.uiNewOrderDisplay();
 
                 switch (newOrderInput) {
-
-                    case 1:
-                        System.out.println("Opening Add Sandwich Menu...");
-                        break;
-                    case 2:
+                    case 1 -> System.out.println("Opening Add Sandwich Menu...");
+                    case 2 -> {
                         int choice = uiDrinkSelectionDisplay();
-                        String name;
+                        String name = " ";
 
                         switch (choice) {
-                            case 0:
-                                System.out.println("Going Back...");
-                                break;
-                            case 1:
-                                name = "Coca Coola";
-                                System.out.println("You selected: Coca Cola- I MEAN Coca Coola");
-                                break;
-                            case 2:
-                                System.out.println("You selected: Diet Coca-Cola- I MEAN Coca Coola");
-                            case 3:
-                                name = "Spryte";
-                                System.out.println("You selected: Sprite- I MEAN Spryte");
-                                break;
-                            case 4:
-                                name = "Orange Fanto";
-                                System.out.println("You selected: Orange Fanta- I MEAN Orange Fanto");
-                                break;
-                            case 5:
-                                name = "Bepsi";
-                                System.out.println("You selected: Pepsi- I MEAN Bepsi");
-                                break;
-                            case 6:
-                                name = "7-UP";
-                                System.out.println("You selected: 7-UP- I MEAN 77-UP");
-                                break;
-                            case 7:
-                                name = "Valley Dew";
-                                System.out.println("You selected: Mountain Dew- I MEAN Valley Dew");
-                                break;
-                            case 8:
-                                name = "Hour Maid";
-                                System.out.println("You selected: Minute Maid- I MEAN Hour Maid");
-                                break;
-                            default:
-                                System.err.println("Invalid Input");
-                                break;
+                            case 0 ->                           System.out.println("Going Back...");
+                            case 1 -> {name = "Coca Coola";     System.out.println("You selected: Coca Cola- I MEAN Coca Coola");}
+                            case 2 -> {name = "Diet Coca Coola";System.out.println("You selected: Diet Coca-Cola- I MEAN Coca Coola");}
+                            case 3 -> {name = "Spryte";         System.out.println("You selected: Sprite- I MEAN Spryte");}
+                            case 4 -> {name = "Orange Fanto";   System.out.println("You selected: Orange Fanta- I MEAN Orange Fanto");}
+                            case 5 -> {name = "Bepsi";          System.out.println("You selected: Pepsi- I MEAN Bepsi");}
+                            case 6 -> {name = "7-UP";           System.out.println("You selected: 7-UP- I MEAN 77-UP");}
+                            case 7 -> {name = "Valley Dew";     System.out.println("You selected: Mountain Dew- I MEAN Valley Dew");}
+                            case 8 -> {name = "Hour Maid";      System.out.println("You selected: Minute Maid- I MEAN Hour Maid");}
+                            default ->                          System.err.println("Invalid Input");
                         }
 
                         System.out.println("Please Select your Drink Size: ");
@@ -119,43 +90,26 @@ public class UserInterface {
                         scanner.nextLine(); // scanner eater
 
                         String size;
-                        int Pr
+                        double price;
 
                         switch (choice) {
-                            case 1:
-                                System.out.println("You Selected: SMALL");
-                                size = "SMALL";
-                                break;
-                            case 2:
-                                System.out.println("You Selected: MEDIUM");
-                                size = "MEDIUM";
-                                break;
-                            case 3:
-                                System.out.println("You Selected: LARGE");
-                                size = "LARGE";
+                            case 1 -> {System.out.println("You Selected: SMALL"); size = "SMALL";price = 2.00;}
+                            case 2 -> {System.out.println("You Selected: MEDIUM");size = "MEDIUM";price = 2.50;}
+                            case 3 -> {System.out.println("You Selected: LARGE"); size = "LARGE";price = 3.00;}
+                            default ->{System.out.println("No Size Selected");continue;}
                         }
 
-
-
-
-
-
-
-                        break;
-                    case 3:
-                        System.out.println("Opening Add Chips Menu...");
-                        break;
-                    case 4:
-                        System.out.println("Opening Checkout Screen");
-                        break;
-                    case 0:
+                        Drink drink = new Drink(name, price, size);
+                        System.out.println("Your Drink Selection: " + drink);
+                    }
+                    case 3 -> System.out.println("Opening Add Chips Menu...");
+                    case 4 -> System.out.println("Opening Checkout Screen");
+                    case 0 -> {
                         System.out.println("_____________________________________________");
                         System.out.println("Canceling Order...");
                         running = false;
-                        break;
-                    default:
-                        System.err.println("Incorrect Input. Returning to Home Screen...");
-                        break;
+                    }
+                    default -> System.err.println("Incorrect Input. Returning to Home Screen...");
                 }
 
             } catch (Exception e) {
