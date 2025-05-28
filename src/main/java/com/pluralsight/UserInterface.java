@@ -68,7 +68,31 @@ public class UserInterface {
                         System.out.println("Opening Add Sandwich Menu...");
                         break;
                     case 2:
-                        System.out.println("Opening Add Drinks Menu...");
+                        System.out.println("🍺 Drink Selection Screen");
+                        System.out.println("_____________________________________________");
+                        System.out.println("Please Make Drink Selection from the Options Below: ");
+                        System.out.println("1) Coca-Coola ");
+                        System.out.println("2) Diet Coca-Coola");
+                        System.out.println("3) Spryte");
+                        System.out.println("4) Orange Fanto");
+                        System.out.println("5) Bepsi");
+                        System.out.println("6) 6-Up");
+                        System.out.println("7) Valley Dew");
+                        System.out.println("8) Hour Maid");
+
+                        System.out.println("\n0) Go Back");
+
+                        System.out.print("\n Enter Here: ");
+                        int choice = 0;
+
+                        switch (choice) {
+                            case 0:
+                                
+                        }
+
+
+
+
                         break;
                     case 3:
                         System.out.println("Opening Add Chips Menu...");

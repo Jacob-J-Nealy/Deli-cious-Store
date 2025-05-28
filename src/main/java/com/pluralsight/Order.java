@@ -13,4 +13,8 @@ public class Order {
     public void addItem(Priceable item) {
         items.add(item);
     }
+
+    public void displayOrder() {
+        System.out.println("Your Order:");
+    }
 }
