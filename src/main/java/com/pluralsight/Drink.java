@@ -14,6 +14,15 @@ public class Drink implements Priceable {
         this.size = size;
     }
 
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", size='" + size + '\'' +
+                '}';
+    }
+
     // Getters & Setters
     public String getName() {
         return name;
