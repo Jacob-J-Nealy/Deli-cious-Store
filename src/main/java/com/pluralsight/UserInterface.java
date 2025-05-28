@@ -68,26 +68,8 @@ public class UserInterface {
                         System.out.println("Opening Add Sandwich Menu...");
                         break;
                     case 2:
-                        System.out.println("🍺 Drink Selection Screen");
-                        System.out.println("_____________________________________________");
-                        System.out.println("Please Make Your Selection from the Off-Brand Options Below: ");
-
-                        System.out.println("1) Coca-Coola ");
-                        System.out.println("2) Diet Coca-Coola");
-                        System.out.println("3) Spryte");
-                        System.out.println("4) Orange Fanto");
-                        System.out.println("5) Bepsi");
-                        System.out.println("6) 77-UP");
-                        System.out.println("7) Valley Dew");
-                        System.out.println("8) Hour Maid");
-
-                        System.out.println("\n0) Go Back");
-
-                        System.out.print("\n Enter Here: ");
-                        int choice;
+                        int choice = uiDrinkSelectionDisplay();
                         String name;
-                        choice = scanner.nextInt();
-                        System.out.println("_____________________________________________");
 
                         switch (choice) {
                             case 0:
@@ -127,6 +109,20 @@ public class UserInterface {
                                 System.err.println("Invalid Input");
                                 break;
                         }
+
+                        System.out.println("Please Select your Drink Size: ");
+                        System.out.println("Small Drink  - 2.00$");
+                        System.out.println("Medium Drink - 2.50$");
+                        System.out.println("Large Drink  - 3.00$");
+
+                        switch ()
+
+
+
+
+
+
+
                         break;
                     case 3:
                         System.out.println("Opening Add Chips Menu...");
@@ -182,6 +178,34 @@ public class UserInterface {
         }
 
         return 0;
+    }
+
+    public static void uiDrinkSelectionScreen() {
+
+    }
+    public static int uiDrinkSelectionDisplay() {
+        int choice;
+
+        System.out.println("🍺 Drink Selection Screen");
+        System.out.println("_____________________________________________");
+        System.out.println("Please Make Your Selection from the Off-Brand Options Below: ");
+
+        System.out.println("1) Coca-Coola ");
+        System.out.println("2) Diet Coca-Coola");
+        System.out.println("3) Spryte");
+        System.out.println("4) Orange Fanto");
+        System.out.println("5) Bepsi");
+        System.out.println("6) 77-UP");
+        System.out.println("7) Valley Dew");
+        System.out.println("8) Hour Maid");
+
+        System.out.println("\n0) Go Back");
+
+        System.out.print("\n Enter Here: ");
+        choice = scanner.nextInt();
+        System.out.println("_____________________________________________");
+
+        return choice;
     }
 
 
