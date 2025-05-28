@@ -111,11 +111,29 @@ public class UserInterface {
                         }
 
                         System.out.println("Please Select your Drink Size: ");
-                        System.out.println("Small Drink  - 2.00$");
-                        System.out.println("Medium Drink - 2.50$");
-                        System.out.println("Large Drink  - 3.00$");
+                        System.out.println("1) Small Drink  - 2.00$");
+                        System.out.println("2) Medium Drink - 2.50$");
+                        System.out.println("3) Large Drink  - 3.00$");
+                        System.out.println("Enter Here: ");
+                        choice = scanner.nextInt();
+                        scanner.nextLine(); // scanner eater
 
-                        switch ()
+                        String size;
+                        int Pr
+
+                        switch (choice) {
+                            case 1:
+                                System.out.println("You Selected: SMALL");
+                                size = "SMALL";
+                                break;
+                            case 2:
+                                System.out.println("You Selected: MEDIUM");
+                                size = "MEDIUM";
+                                break;
+                            case 3:
+                                System.out.println("You Selected: LARGE");
+                                size = "LARGE";
+                        }
 
 
 
