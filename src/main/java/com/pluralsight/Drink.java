@@ -14,7 +14,7 @@ public class Drink implements Priceable {
         this.size = size;
     }
 
-    @Override
+    @Override //toString
     public String toString() {
         return "Drink{" +
                 "name='" + name + '\'' +
