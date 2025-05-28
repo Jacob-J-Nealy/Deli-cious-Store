@@ -11,6 +11,14 @@ public class Chips implements Priceable {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Chips{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
+
     // Getters
     public String getName() {
         return name;

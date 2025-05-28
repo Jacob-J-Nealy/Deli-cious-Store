@@ -34,7 +34,6 @@ public class UserInterface {
         }
 
     }
-
     public static void uiNewOrderScreen() {
         int newOrderInput = -1;
         boolean running = true;
@@ -71,7 +70,6 @@ public class UserInterface {
             }
         }
     }
-
     private static void uiDrinkSelectionScreen() {
         Scanner scanner = new Scanner(System.in);
         int drinkSelectInput;
@@ -165,6 +163,77 @@ public class UserInterface {
     }
 
     private static void uiChipsSelection() {
+        Scanner scanner = new Scanner(System.in);
+        int chipsSelectInput;
+
+        while (true) {
+            System.out.println("🍟 Chips Selection Screen");
+            System.out.println("_____________________________________________");
+            System.out.println("Please Make Your Selection from the Off-Brand Chips Below: ");
+            System.out.println("1) Fray Classic Chips ");
+            System.out.println("2) Chorritos");
+            System.out.println("3) Cheezos");
+            System.out.println("4) Orange Fanto");
+            System.out.println("5) Titos");
+            System.out.println("6) Sunrise Chips");
+            System.out.println("\n0) Go Back");
+            System.out.print("\n Enter Here: ");
+            chipsSelectInput = scanner.nextInt();
+            scanner.nextLine(); // scanner eater
+            System.out.println("_____________________________________________");
+
+            if (chipsSelectInput == 0) {
+                System.out.println("Going Back...");
+                return;
+            }
+
+            if (chipsSelectInput < 1 || chipsSelectInput > 6) {
+                System.err.println("Invalid Input. Please Try Again");
+                continue;
+            }
+            break;
+        }
+        String name = null;
+        switch (chipsSelectInput) {
+            case 1 -> name = "Fray Classic Chips";
+            case 2 -> name = "Chorritos";
+            case 3 -> name = "Spryte";
+            case 4 -> name = "Cheezos";
+            case 5 -> name = "Titos";
+            case 6 -> name = "Sunrise Chips";
+            default -> {
+                System.err.println("Invalid Input");
+                return;
+            }
+        }
+
+        String size = null;
+        double price = 0;
+        switch (drinkSizeInput) {
+            case 1 -> {
+                System.out.println("You Selected: SMALL");
+                size = "SMALL";
+                price = 2.00;
+            }
+            case 2 -> {
+                System.out.println("You Selected: MEDIUM");
+                size = "MEDIUM";
+                price = 2.50;
+            }
+            case 3 -> {
+                System.out.println("You Selected: LARGE");
+                size = "LARGE";
+                price = 3.00;
+            }
+            default -> {
+                System.out.println("No Size Selected");
+                break;
+            }
+        }
+
+        Drink drink = new Drink(name, price, size);
+        order.addItem(drink);
+        System.out.println("Your Drink Selection: " + drink);
 
     }
 
