@@ -70,29 +70,63 @@ public class UserInterface {
                     case 2:
                         System.out.println("🍺 Drink Selection Screen");
                         System.out.println("_____________________________________________");
-                        System.out.println("Please Make Drink Selection from the Options Below: ");
+                        System.out.println("Please Make Your Selection from the Off-Brand Options Below: ");
+
                         System.out.println("1) Coca-Coola ");
                         System.out.println("2) Diet Coca-Coola");
                         System.out.println("3) Spryte");
                         System.out.println("4) Orange Fanto");
                         System.out.println("5) Bepsi");
-                        System.out.println("6) 6-Up");
+                        System.out.println("6) 77-UP");
                         System.out.println("7) Valley Dew");
                         System.out.println("8) Hour Maid");
 
                         System.out.println("\n0) Go Back");
 
                         System.out.print("\n Enter Here: ");
-                        int choice = 0;
+                        int choice;
+                        String name;
+                        choice = scanner.nextInt();
+                        System.out.println("_____________________________________________");
 
                         switch (choice) {
                             case 0:
-                                
+                                System.out.println("Going Back...");
+                                break;
+                            case 1:
+                                name = "Coca Coola";
+                                System.out.println("You selected: Coca Cola- I MEAN Coca Coola");
+                                break;
+                            case 2:
+                                System.out.println("You selected: Diet Coca-Cola- I MEAN Coca Coola");
+                            case 3:
+                                name = "Spryte";
+                                System.out.println("You selected: Sprite- I MEAN Spryte");
+                                break;
+                            case 4:
+                                name = "Orange Fanto";
+                                System.out.println("You selected: Orange Fanta- I MEAN Orange Fanto");
+                                break;
+                            case 5:
+                                name = "Bepsi";
+                                System.out.println("You selected: Pepsi- I MEAN Bepsi");
+                                break;
+                            case 6:
+                                name = "7-UP";
+                                System.out.println("You selected: 7-UP- I MEAN 77-UP");
+                                break;
+                            case 7:
+                                name = "Valley Dew";
+                                System.out.println("You selected: Mountain Dew- I MEAN Valley Dew");
+                                break;
+                            case 8:
+                                name = "Hour Maid";
+                                System.out.println("You selected: Minute Maid- I MEAN Hour Maid");
+                                break;
+                            default:
+                                System.err.println("Invalid Input");
+                                break;
                         }
-
-
-
-
                         break;
                     case 3:
                         System.out.println("Opening Add Chips Menu...");
