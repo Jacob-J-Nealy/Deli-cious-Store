@@ -5,17 +5,13 @@ import java.util.Scanner;
 public class UserInterface {
     static Scanner scanner = new Scanner(System.in);
 
-    private static boolean running;
 
-    public static void uiHomeScreen() {
-        boolean running = true;
-
-        while (running) {
+    public static int uiHomeScreen() {
 
             // Display HomeScreen
-            int input = UserInterface.uiHomeScreenDisplay();
+            int homeScreenInput = UserInterface.uiHomeScreenDisplay();
 
-            switch (input) {
+            switch (homeScreenInput) {
 
                 case 1:
                     System.out.println("Opening New Order Menu...");
@@ -24,19 +20,18 @@ public class UserInterface {
                 case 0:
                     System.out.println("_____________________________________________");
                     System.out.println("Closing Application...");
-                    running = false;
                     break;
                 default:
-                    System.err.println("Incorrect Input. Returning to Home Screen...");
+                    System.err.println("Incorrect Input. Try Again");
                     break;
             }
+            return homeScreenInput;
 
-        }
     }
     public static int  uiHomeScreenDisplay() {
 
         try {
-            int input = -1;
+            int homeScreenInput = -1;
 
             System.out.println("\nWelcome to DEliiii-Cious Sandwich Shop!");
             System.out.println("Where we put the Deli in Delicious Sandwiches!");
@@ -47,9 +42,9 @@ public class UserInterface {
             System.out.println("0) Exit Application");
 
             System.out.print("\nInput Here: ");
-            input = scanner.nextInt();
+            homeScreenInput = scanner.nextInt();
 
-            return input;
+            return homeScreenInput;
 
         } catch (Exception e) {
             System.err.println("Incorrect Input. Closing Application...");
@@ -64,31 +59,36 @@ public class UserInterface {
         while (running) {
 
             // Display HomeScreen
-            int newOrderInput = UserInterface.uiNewOrderDisplay();
+            try {
+                int newOrderInput = UserInterface.uiNewOrderDisplay();
 
-            switch (newOrderInput) {
+                switch (newOrderInput) {
 
-                case 1:
-                    System.out.println("Opening Add Sandwich Menu...");
-                    break;
-                case 2:
-                    System.out.println("Opening Add Drinks Menu...");
-                    break;
-                case 3:
-                    System.out.println("Opening Add Chips Menu...");
-                    break;
-                case 4:
-                    System.out.println("Opening Checkout Screen");
-                case 0:
-                    System.out.println("_____________________________________________");
-                    System.out.println("Canceling Order...");
-                    running = false;
-                    break;
-                default:
-                    System.err.println("Incorrect Input. Returning to Home Screen...");
-                    break;
+                    case 1:
+                        System.out.println("Opening Add Sandwich Menu...");
+                        break;
+                    case 2:
+                        System.out.println("Opening Add Drinks Menu...");
+                        break;
+                    case 3:
+                        System.out.println("Opening Add Chips Menu...");
+                        break;
+                    case 4:
+                        System.out.println("Opening Checkout Screen");
+                        break;
+                    case 0:
+                        System.out.println("_____________________________________________");
+                        System.out.println("Canceling Order...");
+                        running = false;
+                        break;
+                    default:
+                        System.err.println("Incorrect Input. Returning to Home Screen...");
+                        break;
+                }
+
+            } catch (Exception e) {
+                System.err.println("Invalid bro...");
             }
-
         }
 
 
