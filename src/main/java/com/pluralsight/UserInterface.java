@@ -73,6 +73,95 @@ public class UserInterface {
             }
         }
     }
+    private void uiSandwichSelection() {
+        int drinkSelectInput;
+
+        while (true) {
+            System.out.println("---Bread Selection Screen---");
+
+
+            System.out.println("🥪 Welcome to the Sandwich Builder!");
+            System.out.println("_____________________________________________");
+
+
+            System.out.println("Please Make Your Selection from the Toppings & Sauce Below");
+            System.out.println("1| Coca-Coola ");
+            System.out.println("2| Diet Coca-Coola");
+            System.out.println("3) Spryte");
+            System.out.println("4) Orange Fanto");
+            System.out.println("5) Bepsi");
+            System.out.println("6) 77-UP");
+            System.out.println("7) Valley Dew");
+            System.out.println("8) Hour Maid");
+            System.out.println("\n0) Go Back");
+            System.out.print("\n Enter Here: ");
+            drinkSelectInput = scanner.nextInt();
+            scanner.nextLine(); // scanner eater
+            System.out.println("_____________________________________________");
+
+            if (drinkSelectInput == 0) {
+                System.out.println("Going Back...");
+                return;
+            }
+
+            if (drinkSelectInput < 1 || drinkSelectInput > 8) {
+                System.err.println("Invalid Input. Please Try Again");
+                continue;
+            }
+            break;
+        }
+        String name = null;
+        switch (drinkSelectInput) {
+            case 1 -> name = "Coca Coola";
+            case 2 -> name = "Diet Coca Coola";
+            case 3 -> name = "Spryte";
+            case 4 -> name = "Orange Fanto";
+            case 5 -> name = "Bepsi";
+            case 6 -> name = "7-UP";
+            case 7 -> name = "Valley Dew";
+            case 8 -> name = "Hour Maid";
+            default -> {
+                System.err.println("Invalid Input");
+                return;
+            }
+        }
+
+        int drinkSizeInput;
+        System.out.println("Please Select your Drink Size: ");
+        System.out.println("1) Small Drink  - 2.00$");
+        System.out.println("2) Medium Drink - 2.50$");
+        System.out.println("3) Large Drink  - 3.00$");
+        System.out.println("Enter Here: ");
+        drinkSizeInput = scanner.nextInt();
+        scanner.nextLine(); // scanner eater
+
+        String size = null;
+        double price = 0;
+        switch (drinkSizeInput) {
+            case 1 -> {
+                System.out.println("You Selected: SMALL");
+                size = "SMALL";
+            }
+            case 2 -> {
+                System.out.println("You Selected: MEDIUM");
+                size = "MEDIUM";
+            }
+            case 3 -> {
+                System.out.println("You Selected: LARGE");
+                size = "LARGE";
+            }
+            default -> {
+                System.out.println("No Size Selected");
+                break;
+            }
+        }
+
+        Drink drink = new Drink(name, size);
+        price = drink.calculatePrice();
+        order.addItem(drink);
+        System.out.println("Your Drink Selection: " + drink);
+
+    }
     private void uiDrinkSelectionScreen() {
         int drinkSelectInput;
 
@@ -157,11 +246,6 @@ public class UserInterface {
         System.out.println("Your Drink Selection: " + drink);
 
     }
-
-    private void uiSandwichSelection() {
-
-    }
-
     private void uiChipsSelection() {
         int chipsSelectInput;
 
@@ -212,7 +296,6 @@ public class UserInterface {
         System.out.println("Your Chips Selection: " + chips);
 
     }
-
     private void uiCheckOut() {
         order.displayOrder();
 

@@ -1,4 +1,8 @@
 package com.pluralsight.orderItems.customSandwichParts;
 
-public class Toppings {
+public abstract class Toppings {
+
+    private String name;
+
+
 }
