@@ -80,15 +80,13 @@ public class UserInterface {
 
         while (true) {
 
-            System.out.println("\n     ---Sandwich Size Selection Screen---" );
+            System.out.println("\n     ---Sandwich Size Selection Screen---");
             System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
             System.out.println("\n|   4' Inch   |   8' Inch   |   12' Inch   |");
             System.out.print("Enter Here: ");
             int sizeChoice = scanner.nextInt();
             scanner.nextLine(); // scanner eater
             System.out.println("__________________________________________________");
-
-
 
 
             System.out.println("           ---Bread Selection Screen---           ");
@@ -99,7 +97,6 @@ public class UserInterface {
             int typeChoice = scanner.nextInt();
             scanner.nextLine(); // scanner eater
             System.out.println("__________________________________________________");
-
 
 
             System.out.println("🥪 Welcome to the Sandwich Builder!");
@@ -139,36 +136,35 @@ public class UserInterface {
             boolean done = false;
 
             Map<Integer, String> toppingsSelectionMap = new HashMap<>();
-                toppingsSelectionMap.put(1, "Lettuce");
-                toppingsSelectionMap.put(2, "Bell Peppers");
-                toppingsSelectionMap.put(3, "Onion");
-                toppingsSelectionMap.put(4, "Tomatoes");
-                toppingsSelectionMap.put(5, "Jalapenos");
-                toppingsSelectionMap.put(6,"Cucumbers");
-                toppingsSelectionMap.put(7, "Pickles");
-                toppingsSelectionMap.put(8, "Spinach");
-                toppingsSelectionMap.put(9, "Guacamole");
-                toppingsSelectionMap.put(10, "Mushrooms");
+            toppingsSelectionMap.put(1, "Lettuce");
+            toppingsSelectionMap.put(2, "Bell Peppers");
+            toppingsSelectionMap.put(3, "Onion");
+            toppingsSelectionMap.put(4, "Tomatoes");
+            toppingsSelectionMap.put(5, "Jalapenos");
+            toppingsSelectionMap.put(6, "Cucumbers");
+            toppingsSelectionMap.put(7, "Pickles");
+            toppingsSelectionMap.put(8, "Spinach");
+            toppingsSelectionMap.put(9, "Guacamole");
+            toppingsSelectionMap.put(10, "Mushrooms");
 
-                toppingsSelectionMap.put(11, "Steak");
-                toppingsSelectionMap.put(12, "Ham");
-                toppingsSelectionMap.put(13, "Salami");
-                toppingsSelectionMap.put(14, "Roast Beef");
-                toppingsSelectionMap.put(15, "Chicken");
-                toppingsSelectionMap.put(16, "Bacon");
+            toppingsSelectionMap.put(11, "Steak");
+            toppingsSelectionMap.put(12, "Ham");
+            toppingsSelectionMap.put(13, "Salami");
+            toppingsSelectionMap.put(14, "Roast Beef");
+            toppingsSelectionMap.put(15, "Chicken");
+            toppingsSelectionMap.put(16, "Bacon");
 
-                toppingsSelectionMap.put(17, "American Cheese");
-                toppingsSelectionMap.put(18, "Provolone Cheese");
-                toppingsSelectionMap.put(19, "Cheddar Cheese");
-                toppingsSelectionMap.put(20, "Swiss Cheese");
+            toppingsSelectionMap.put(17, "American Cheese");
+            toppingsSelectionMap.put(18, "Provolone Cheese");
+            toppingsSelectionMap.put(19, "Cheddar Cheese");
+            toppingsSelectionMap.put(20, "Swiss Cheese");
 
-                toppingsSelectionMap.put(21, "Mayo");
-                toppingsSelectionMap.put(22, "Mustard");
-                toppingsSelectionMap.put(23, "Ketchup");
-                toppingsSelectionMap.put(24, "Ranch");
-                toppingsSelectionMap.put(25, "Thousand Island");
-                toppingsSelectionMap.put(26, "Vinaigrette");
-
+            toppingsSelectionMap.put(21, "Mayo");
+            toppingsSelectionMap.put(22, "Mustard");
+            toppingsSelectionMap.put(23, "Ketchup");
+            toppingsSelectionMap.put(24, "Ranch");
+            toppingsSelectionMap.put(25, "Thousand Island");
+            toppingsSelectionMap.put(26, "Vinaigrette");
 
 
             while (!done) {
@@ -182,91 +178,11 @@ public class UserInterface {
                 } else if (toppingsSelectionMap.containsKey(toppingsChoice)) {
                     String toppingName = toppingsSelectionMap.get(toppingsChoice);
                     System.out.println("✅ Added: " + toppingName);
-                }
-                else {
+                } else {
                     System.out.println("❌ Invalid Input. Try Again.");
                 }
             }
-
-
-
-            System.out.println("Please Make Your Selection from the Toppings & Sauce Below");
-            System.out.println("1| Coca-Coola ");
-            System.out.println("2| Diet Coca-Coola");
-            System.out.println("3) Spryte");
-            System.out.println("4) Orange Fanto");
-            System.out.println("5) Bepsi");
-            System.out.println("6) 77-UP");
-            System.out.println("7) Valley Dew");
-            System.out.println("8) Hour Maid");
-            System.out.println("\n0) Go Back");
-            System.out.print("\n Enter Here: ");
-            drinkSelectInput = scanner.nextInt();
-            scanner.nextLine(); // scanner eater
-            System.out.println("__________________________________________________");
-
-            if (drinkSelectInput == 0) {
-                System.out.println("Going Back...");
-                return;
-            }
-
-            if (drinkSelectInput < 1 || drinkSelectInput > 8) {
-                System.err.println("Invalid Input. Please Try Again");
-                continue;
-            }
-            break;
         }
-        String name = null;
-        switch (drinkSelectInput) {
-            case 1 -> name = "Coca Coola";
-            case 2 -> name = "Diet Coca Coola";
-            case 3 -> name = "Spryte";
-            case 4 -> name = "Orange Fanto";
-            case 5 -> name = "Bepsi";
-            case 6 -> name = "7-UP";
-            case 7 -> name = "Valley Dew";
-            case 8 -> name = "Hour Maid";
-            default -> {
-                System.err.println("Invalid Input");
-                return;
-            }
-        }
-
-        int drinkSizeInput;
-        System.out.println("Please Select your Drink Size: ");
-        System.out.println("1) Small Drink  - 2.00$");
-        System.out.println("2) Medium Drink - 2.50$");
-        System.out.println("3) Large Drink  - 3.00$");
-        System.out.println("Enter Here: ");
-        drinkSizeInput = scanner.nextInt();
-        scanner.nextLine(); // scanner eater
-
-        String size = null;
-        double price = 0;
-        switch (drinkSizeInput) {
-            case 1 -> {
-                System.out.println("You Selected: SMALL");
-                size = "SMALL";
-            }
-            case 2 -> {
-                System.out.println("You Selected: MEDIUM");
-                size = "MEDIUM";
-            }
-            case 3 -> {
-                System.out.println("You Selected: LARGE");
-                size = "LARGE";
-            }
-            default -> {
-                System.out.println("No Size Selected");
-                break;
-            }
-        }
-
-        Drink drink = new Drink(name, size);
-        price = drink.calculatePrice();
-        order.addItem(drink);
-        System.out.println("Your Drink Selection: " + drink);
-
     }
     private void uiDrinkSelectionScreen() {
         int drinkSelectInput;
