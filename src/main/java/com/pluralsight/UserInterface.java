@@ -139,9 +139,37 @@ public class UserInterface {
             boolean done = false;
 
             Map<Integer, String> toppingsSelectionMap = new HashMap<>();
-            toppingsSelectionMap.put(1, "Lettuce");
-            toppingsSelectionMap.put(2, "Bell Peppers");
-            
+                toppingsSelectionMap.put(1, "Lettuce");
+                toppingsSelectionMap.put(2, "Bell Peppers");
+                toppingsSelectionMap.put(3, "Onion");
+                toppingsSelectionMap.put(4, "Tomatoes");
+                toppingsSelectionMap.put(5, "Jalapenos");
+                toppingsSelectionMap.put(6,"Cucumbers");
+                toppingsSelectionMap.put(7, "Pickles");
+                toppingsSelectionMap.put(8, "Spinach");
+                toppingsSelectionMap.put(9, "Guacamole");
+                toppingsSelectionMap.put(10, "Mushrooms");
+
+                toppingsSelectionMap.put(11, "Steak");
+                toppingsSelectionMap.put(12, "Ham");
+                toppingsSelectionMap.put(13, "Salami");
+                toppingsSelectionMap.put(14, "Roast Beef");
+                toppingsSelectionMap.put(15, "Chicken");
+                toppingsSelectionMap.put(16, "Bacon");
+
+                toppingsSelectionMap.put(17, "American Cheese");
+                toppingsSelectionMap.put(18, "Provolone Cheese");
+                toppingsSelectionMap.put(19, "Cheddar Cheese");
+                toppingsSelectionMap.put(20, "Swiss Cheese");
+
+                toppingsSelectionMap.put(21, "Mayo");
+                toppingsSelectionMap.put(22, "Mustard");
+                toppingsSelectionMap.put(23, "Ketchup");
+                toppingsSelectionMap.put(24, "Ranch");
+                toppingsSelectionMap.put(25, "Thousand Island");
+                toppingsSelectionMap.put(26, "Vinaigrette");
+
+
 
             while (!done) {
                 System.out.println("(Enter 0 when finished)");
@@ -149,7 +177,15 @@ public class UserInterface {
                 System.out.print("Enter Here: ");
                 int toppingsChoice = scanner.nextInt();
 
-
+                if (toppingsChoice == 0) {
+                    done = true;
+                } else if (toppingsSelectionMap.containsKey(toppingsChoice)) {
+                    String toppingName = toppingsSelectionMap.get(toppingsChoice);
+                    System.out.println("✅ Added: " + toppingName);
+                }
+                else {
+                    System.out.println("❌ Invalid Input. Try Again.");
+                }
             }
 
 
