@@ -3,6 +3,8 @@ package com.pluralsight;
 import com.pluralsight.orderItems.Chips;
 import com.pluralsight.orderItems.Drink;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -104,11 +106,52 @@ public class UserInterface {
             System.out.println("__________________________________________________");
             System.out.println("⬇️ Please Enter a Number from the Options Below To Add to Your Sandwich ⬇️");
             System.out.println();
-            System.out.println("                        +++ Regular Toppings +++                            ");
-            System.out.println("|    1-Lettuce    |    2-Bell Peppers    |    3-Onions    |    4-Tomatoes  |");
-            System.out.println("|    5-Jalapenos  |    6-Cucumbers       |    7-Pickles   |    8-Pickles   |");
-            System.out.println("                  |    9-Guacamole       |   10-Mushrooms |");
-            System.out.println("|                        +++ Meats +++");
+
+            // Regular Toppings
+            System.out.println("                         +++ Regular Toppings +++                                 |");
+            System.out.println("|_________________________________________________________________________________|");
+            System.out.println("   1 - Lettuce       |  2 - Bell Peppers  |  3 - Onions       |  4 - Tomatoes      ");
+            System.out.println("   5 - Jalapenos     |  6 - Cucumbers     |  7 - Pickles      |  8 - Spinach       ");
+            System.out.println("                     |   9 - Guacamole    | 10 - Mushrooms    |                                        ");
+            System.out.println();
+
+            // Meats
+            System.out.println("                               +++ Meats +++                                      |");
+            System.out.println("|      NOTE: Extra charge for more than one Meat (based on size)                  |");
+            System.out.println("|_________________________________________________________________________________|");
+            System.out.println("| 11 - Steak         | 12 - Ham           | 13 - Salami       | 14 - Roast Beef    ");
+            System.out.println("                     | 15 - Chicken       | 16 - Bacon        |                    ");
+            System.out.println();
+
+            // Cheeses
+            System.out.println("|                             +++ Cheeses +++                                     |");
+            System.out.println("|      NOTE: Extra charge for more than one cheese (based on size)                |");
+            System.out.println("|_________________________________________________________________________________|");
+            System.out.println("  17 - American      | 18 - Provolone     | 19 - Cheddar      | 20 - Swiss         ");
+            System.out.println();
+
+            // Sauces
+            System.out.println("|                              +++ Sauces +++                                     |");
+            System.out.println("|_________________________________________________________________________________|");
+            System.out.println("| 21 - Mayo          | 22 - Mustard       | 23 - Ketchup      | 24 - Ranch        |");
+            System.out.println("                     | 25 - Thousand Isl. | 26 - Vinaigrette  |                                       |");
+
+            boolean done = false;
+
+            Map<Integer, String> toppingsSelectionMap = new HashMap<>();
+            toppingsSelectionMap.put(1, "Lettuce");
+            toppingsSelectionMap.put(2, "Bell Peppers");
+            
+
+            while (!done) {
+                System.out.println("(Enter 0 when finished)");
+                System.out.println();
+                System.out.print("Enter Here: ");
+                int toppingsChoice = scanner.nextInt();
+
+
+            }
+
 
 
             System.out.println("Please Make Your Selection from the Toppings & Sauce Below");
