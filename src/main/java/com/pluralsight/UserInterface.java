@@ -77,18 +77,38 @@ public class UserInterface {
         int drinkSelectInput;
 
         while (true) {
-            System.out.println("---Bread Selection Screen---\n");
-            System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
-            System.out.println("\n1| White  2| Wheat");
-            System.out.println  ("3| Rye    4| Wrap");
 
-            System.out.println("Enter Here: ");
-            scanner.nextInt();
+            System.out.println("\n     ---Sandwich Size Selection Screen---" );
+            System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
+            System.out.println("\n|   4' Inch   |   8' Inch   |   12' Inch   |");
+            System.out.print("Enter Here: ");
+            int sizeChoice = scanner.nextInt();
             scanner.nextLine(); // scanner eater
+            System.out.println("__________________________________________________");
+
+
+
+
+            System.out.println("           ---Bread Selection Screen---           ");
+            System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
+            System.out.println("\n|   1-White   |   2-Wheat   |   3-Rye   |   4-Wrap   |");
+
+            System.out.print("Enter Here: ");
+            int typeChoice = scanner.nextInt();
+            scanner.nextLine(); // scanner eater
+            System.out.println("__________________________________________________");
+
 
 
             System.out.println("🥪 Welcome to the Sandwich Builder!");
-            System.out.println("_____________________________________________");
+            System.out.println("__________________________________________________");
+            System.out.println("⬇️ Please Enter a Number from the Options Below To Add to Your Sandwich ⬇️");
+            System.out.println();
+            System.out.println("                        +++ Regular Toppings +++                            ");
+            System.out.println("|    1-Lettuce    |    2-Bell Peppers    |    3-Onions    |    4-Tomatoes  |");
+            System.out.println("|    5-Jalapenos  |    6-Cucumbers       |    7-Pickles   |    8-Pickles   |");
+            System.out.println("                  |    9-Guacamole       |   10-Mushrooms |");
+            System.out.println("|                        +++ Meats +++");
 
 
             System.out.println("Please Make Your Selection from the Toppings & Sauce Below");
@@ -104,7 +124,7 @@ public class UserInterface {
             System.out.print("\n Enter Here: ");
             drinkSelectInput = scanner.nextInt();
             scanner.nextLine(); // scanner eater
-            System.out.println("_____________________________________________");
+            System.out.println("__________________________________________________");
 
             if (drinkSelectInput == 0) {
                 System.out.println("Going Back...");
