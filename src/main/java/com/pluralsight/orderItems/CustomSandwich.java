@@ -11,8 +11,8 @@ public class CustomSandwich implements Priceable {
     //Properties
     private int size;
     private Bread bread;
-    private boolean toasted;
     private List<Toppings> toppingsList;
+    private boolean toasted;
 
     private void getBread() {
     }

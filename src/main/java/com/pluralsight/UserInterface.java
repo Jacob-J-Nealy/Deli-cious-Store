@@ -77,7 +77,14 @@ public class UserInterface {
         int drinkSelectInput;
 
         while (true) {
-            System.out.println("---Bread Selection Screen---");
+            System.out.println("---Bread Selection Screen---\n");
+            System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
+            System.out.println("\n1| White  2| Wheat");
+            System.out.println  ("3| Rye    4| Wrap");
+
+            System.out.println("Enter Here: ");
+            scanner.nextInt();
+            scanner.nextLine(); // scanner eater
 
 
             System.out.println("🥪 Welcome to the Sandwich Builder!");
