@@ -4,19 +4,22 @@ public class Chips implements Priceable {
 
     //Properties
     private String name;
-    private double price;
 
-    public Chips(String name, double price) {
+    // Chips Constructor
+    public Chips(String name) {
         this.name = name;
-        this.price = price;
     }
 
     @Override
     public String toString() {
-        return "Chips{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+
+        // String Builder Drink Builder
+        StringBuilder chipBuilder = new StringBuilder();
+        chipBuilder.append(name).append(" ");
+        chipBuilder.append("-").append(" ");
+        chipBuilder.append(String.format("$%.2f", calculatePrice()));
+
+        return chipBuilder.toString();
     }
 
     // Getters
@@ -26,7 +29,7 @@ public class Chips implements Priceable {
 
     @Override
     public double calculatePrice() {
-        return price = 1.50;
+        return 1.50;
     }
 
 

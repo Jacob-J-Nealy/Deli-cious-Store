@@ -204,7 +204,7 @@ public class UserInterface {
             }
         }
 
-        Chips chips = new Chips(name,price);
+        Chips chips = new Chips(name);
         order.addItem(chips);
         System.out.println("Your Chips Selection: " + chips);
 

@@ -23,11 +23,6 @@ public class Drink implements Priceable {
         drinkBuilder.append(String.format("$%.2f", calculatePrice()));
 
         return drinkBuilder.toString();
-
-//        return "Drink{" +
-//                "name='" + name + '\'' +
-//                ", size='" + size + '\'' +
-//                '}';
     }
 
     // Getters & Setters
