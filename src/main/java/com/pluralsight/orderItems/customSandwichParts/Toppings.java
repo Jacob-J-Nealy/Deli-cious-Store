@@ -8,6 +8,13 @@ public abstract class Toppings {
     private boolean isCheese;
     private boolean isMeat;
 
+    public Toppings(String name, boolean isPremium, boolean isCheese, boolean isMeat) {
+        this.name = name;
+        this.isPremium = isPremium;
+        this.isCheese = isCheese;
+        this.isMeat = isMeat;
+    }
+
     // Toppings Constructor
     public Toppings(String name, boolean isPremium) {
         this.name = name;
