@@ -4,23 +4,30 @@ public class Drink implements Priceable {
 
     // Properties
     private String name;
-    private double price;
     private String size;
 
     //Constructor
-    public Drink(String name, double price, String size) {
+    public Drink(String name, String size) {
         this.name = name;
-        this.price = price;
         this.size = size;
     }
 
-    @Override //toString
+    @Override
     public String toString() {
-        return "Drink{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", size='" + size + '\'' +
-                '}';
+
+        // String Builder Drink Builder
+        StringBuilder drinkBuilder = new StringBuilder();
+        drinkBuilder.append(size).append(" ");
+        drinkBuilder.append(name).append(" ");
+        drinkBuilder.append("-").append(" ");
+        drinkBuilder.append(String.format("$%.2f", calculatePrice()));
+
+        return drinkBuilder.toString();
+
+//        return "Drink{" +
+//                "name='" + name + '\'' +
+//                ", size='" + size + '\'' +
+//                '}';
     }
 
     // Getters & Setters
@@ -41,15 +48,15 @@ public class Drink implements Priceable {
     @Override
     public double calculatePrice() {
         if(size.equalsIgnoreCase("SMALL")){
-            this.price = 2.00;
+            return  2.00;
         }
 
         if (size.equalsIgnoreCase("MEDIUM")) {
-            this.price = 2.50;
+           return  2.50;
         }
 
         if (size.equalsIgnoreCase("LARGE")) {
-            this.price = 3.00;
+            return 3.00;
         }
 
         return 0;

@@ -148,8 +148,8 @@ public class UserInterface {
             }
         }
 
-        Drink drink = new Drink(name,price , size);
-        drink.calculatePrice();
+        Drink drink = new Drink(name, size);
+        price = drink.calculatePrice();
         order.addItem(drink);
         System.out.println("Your Drink Selection: " + drink);
 
