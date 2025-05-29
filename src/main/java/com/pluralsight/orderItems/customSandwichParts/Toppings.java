@@ -5,6 +5,8 @@ public abstract class Toppings {
     // Toppings Properties
     private String name;
     private boolean isPremium;
+    private boolean isCheese;
+    private boolean isMeat;
 
     // Toppings Constructor
     public Toppings(String name, boolean isPremium) {
@@ -21,11 +23,15 @@ public abstract class Toppings {
                 '}';
     }
 
+    //Custom Methods
+
+    public abstract double calculatePrice(int size);
+
+
     // Getters & Setters
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -33,8 +39,8 @@ public abstract class Toppings {
     public boolean isPremium() {
         return isPremium;
     }
-
     public void setPremium(boolean premium) {
         isPremium = premium;
     }
+
 }

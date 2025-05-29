@@ -196,12 +196,12 @@ public class UserInterface {
                 int toppingsChoice = scanner.nextInt();
                 scanner.nextLine(); // scanner eater
 
-                toppingsList.add(toppingsChoice);
+                // toppingsList.add(toppingsChoice);
                 if (toppingsChoice == 0) {
                     done = true;
                 } else if (toppingsSelectionMap.containsKey(toppingsChoice)) {
                     String toppingName = toppingsSelectionMap.get(toppingsChoice);
-                    Toppings toppings = new Toppings(toppingName, false)
+                    Toppings toppings = new Toppings(toppingName, false);
 
                     System.out.println("✅ Added: " + toppingName);
                 } else {
@@ -225,7 +225,7 @@ public class UserInterface {
                 isToasted = false;
             }
 
-            CustomSandwich sandwich = new CustomSandwich(sizeChoice, breadChoice,   );
+           CustomSandwich sandwich = new CustomSandwich(sizeChoice, breadChoice,   );
 
         }
     }
