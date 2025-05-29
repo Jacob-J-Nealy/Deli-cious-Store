@@ -3,10 +3,10 @@ package com.pluralsight;
 import com.pluralsight.orderItems.Chips;
 import com.pluralsight.orderItems.CustomSandwich;
 import com.pluralsight.orderItems.Drink;
+import com.pluralsight.orderItems.customSandwichParts.Bread;
+import com.pluralsight.orderItems.customSandwichParts.Toppings;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class UserInterface {
     private Scanner scanner = new Scanner(System.in);
@@ -81,46 +81,40 @@ public class UserInterface {
 
         while (true) {
 
+            // Sandwich Size Selection
             System.out.println("\n     ---Sandwich Size Selection Screen---");
             System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
             System.out.println("\n|   4' Inch   |   8' Inch   |   12' Inch   |");
             System.out.print("Enter Number Here: ");
             int sizeChoice = scanner.nextInt();
             scanner.nextLine(); // scanner eater
-
             switch (sizeChoice) {
-                case 4:
-                    sizeChoice = 4;
-                    break;
-                case 8:
-                    sizeChoice = 8;
-                    break;
-                case 12:
-                    sizeChoice = 12;
-                    break;
+                case 4 -> sizeChoice = 4;
+                case 8 -> sizeChoice = 8;
+                case 12 -> sizeChoice = 12;
             }
             System.out.println("__________________________________________________");
 
 
+            // Bread Selection Screen
             System.out.println("           ---Bread Selection Screen---           ");
             System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
             System.out.println("\n|   1-White   |   2-Wheat   |   3-Rye   |   4-Wrap   |");
-
             System.out.print("Enter Here: ");
             int typeChoice = scanner.nextInt();
-            String bread;
+            Bread breadChoice = null;
             scanner.nextLine(); // scanner eater
-
             switch (typeChoice) {
-                case 1:
-                    bread = "White";
-                    break;
-                case 2:
+                case 1 -> breadChoice = new Bread("White");
+                case 2 -> breadChoice = new Bread("Wheat");
+                case 3 -> breadChoice = new Bread("Rye"  );
+                case 4 -> breadChoice = new Bread("Wrap" );
+                default -> System.out.println("❌ Invalid Selection; Try Again.");
             }
-
             System.out.println("__________________________________________________");
 
 
+            // Sandwich Builder
             System.out.println("🥪 Welcome to the Sandwich Builder!");
             System.out.println("__________________________________________________");
             System.out.println("⬇️ Please Enter a Number from the Options Below To Add to Your Sandwich ⬇️");
@@ -158,36 +152,42 @@ public class UserInterface {
             boolean done = false;
 
             Map<Integer, String> toppingsSelectionMap = new HashMap<>();
-            toppingsSelectionMap.put(1, "Lettuce");
-            toppingsSelectionMap.put(2, "Bell Peppers");
-            toppingsSelectionMap.put(3, "Onion");
-            toppingsSelectionMap.put(4, "Tomatoes");
-            toppingsSelectionMap.put(5, "Jalapenos");
-            toppingsSelectionMap.put(6, "Cucumbers");
-            toppingsSelectionMap.put(7, "Pickles");
-            toppingsSelectionMap.put(8, "Spinach");
-            toppingsSelectionMap.put(9, "Guacamole");
-            toppingsSelectionMap.put(10, "Mushrooms");
 
-            toppingsSelectionMap.put(11, "Steak");
-            toppingsSelectionMap.put(12, "Ham");
-            toppingsSelectionMap.put(13, "Salami");
-            toppingsSelectionMap.put(14, "Roast Beef");
-            toppingsSelectionMap.put(15, "Chicken");
-            toppingsSelectionMap.put(16, "Bacon");
+            // Regular Toppings
+            toppingsSelectionMap.put(1,"Lettuce");
+            toppingsSelectionMap.put(2,"Bell Peppers");
+            toppingsSelectionMap.put(3,"Onion");
+            toppingsSelectionMap.put(4,"Tomatoes");
+            toppingsSelectionMap.put(5,"Jalapenos");
+            toppingsSelectionMap.put(6,"Cucumbers");
+            toppingsSelectionMap.put(7,"Pickles");
+            toppingsSelectionMap.put(8,"Spinach");
+            toppingsSelectionMap.put(9,"Guacamole");
+            toppingsSelectionMap.put(10,"Mushrooms");
 
-            toppingsSelectionMap.put(17, "American Cheese");
-            toppingsSelectionMap.put(18, "Provolone Cheese");
-            toppingsSelectionMap.put(19, "Cheddar Cheese");
-            toppingsSelectionMap.put(20, "Swiss Cheese");
+            // Meat
+            toppingsSelectionMap.put(11,"Steak");
+            toppingsSelectionMap.put(12,"Ham");
+            toppingsSelectionMap.put(13,"Salami");
+            toppingsSelectionMap.put(14,"Roast Beef");
+            toppingsSelectionMap.put(15,"Chicken");
+            toppingsSelectionMap.put(16,"Bacon");
 
-            toppingsSelectionMap.put(21, "Mayo");
-            toppingsSelectionMap.put(22, "Mustard");
-            toppingsSelectionMap.put(23, "Ketchup");
-            toppingsSelectionMap.put(24, "Ranch");
-            toppingsSelectionMap.put(25, "Thousand Island");
-            toppingsSelectionMap.put(26, "Vinaigrette");
+            // Cheese
+            toppingsSelectionMap.put(17,"American Cheese");
+            toppingsSelectionMap.put(18,"Provolone Cheese");
+            toppingsSelectionMap.put(19,"Cheddar Cheese");
+            toppingsSelectionMap.put(20,"Swiss Cheese");
 
+            //Sauce
+            toppingsSelectionMap.put(21,"Mayo");
+            toppingsSelectionMap.put(22,"Mustard");
+            toppingsSelectionMap.put(23,"Ketchup");
+            toppingsSelectionMap.put(24,"Ranch");
+            toppingsSelectionMap.put(25,"Thousand Island");
+            toppingsSelectionMap.put(26,"Vinaigrette");
+
+            List<Toppings> toppingsList = new ArrayList<>();
 
             while (!done) {
                 System.out.println("(Enter 0 when finished)");
@@ -196,10 +196,14 @@ public class UserInterface {
                 int toppingsChoice = scanner.nextInt();
                 scanner.nextLine(); // scanner eater
 
+                toppingsList.add(toppingsChoice);
                 if (toppingsChoice == 0) {
                     done = true;
                 } else if (toppingsSelectionMap.containsKey(toppingsChoice)) {
                     String toppingName = toppingsSelectionMap.get(toppingsChoice);
+                    Toppings toppings = new Toppings(toppingName, false) {
+                    }
+
                     System.out.println("✅ Added: " + toppingName);
                 } else {
                     System.out.println("❌ Invalid Input. Try Again.");
@@ -207,6 +211,7 @@ public class UserInterface {
             }
             System.out.println("__________________________________________________");
 
+            // Is Sandwich Toasted?
             boolean isToasted;
             System.out.println("---Toasted?---");
             System.out.println("Y: yes");
@@ -215,13 +220,13 @@ public class UserInterface {
             System.out.print("Enter Here: ");
             String toastedChoice = scanner.nextLine();
 
-            if (toastedChoice == "Y") {
+            if (toastedChoice.equalsIgnoreCase("Y")) {
                 isToasted = true;
-            } else if (toastedChoice == "N") {
+            } else if (toastedChoice.equalsIgnoreCase("N")) {
                 isToasted = false;
             }
 
-            CustomSandwich sandwich = new CustomSandwich();
+            CustomSandwich sandwich = new CustomSandwich(sizeChoice, breadChoice,   );
 
         }
     }
