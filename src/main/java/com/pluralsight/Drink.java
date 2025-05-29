@@ -40,7 +40,10 @@ public class Drink implements Priceable {
 
     @Override
     public double getPrice() {
-        return price;
+        if(size.equalsIgnoreCase("Small")){
+            return 2.00;
+        }
+        return 2;
     }
     public void setPrice(double price) {
         this.price = price;

@@ -23,8 +23,12 @@ public class Chips implements Priceable {
     public String getName() {
         return name;
     }
+
     @Override
     public double getPrice() {
-        return price;
+        return price = 1.50;
     }
+
+
+
 }

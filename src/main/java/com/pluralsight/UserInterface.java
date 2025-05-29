@@ -71,7 +71,6 @@ public class UserInterface {
         }
     }
     private static void uiDrinkSelectionScreen() {
-        Scanner scanner = new Scanner(System.in);
         int drinkSelectInput;
 
         while (true) {
@@ -163,7 +162,6 @@ public class UserInterface {
     }
 
     private static void uiChipsSelection() {
-        Scanner scanner = new Scanner(System.in);
         int chipsSelectInput;
 
         while (true) {
@@ -173,7 +171,7 @@ public class UserInterface {
             System.out.println("1) Fray Classic Chips ");
             System.out.println("2) Chorritos");
             System.out.println("3) Cheezos");
-            System.out.println("4) Orange Fanto");
+            System.out.println("4) Hot Cheezos");
             System.out.println("5) Titos");
             System.out.println("6) Sunrise Chips");
             System.out.println("\n0) Go Back");
@@ -194,11 +192,12 @@ public class UserInterface {
             break;
         }
         String name = null;
+        double price = 1.50;
         switch (chipsSelectInput) {
             case 1 -> name = "Fray Classic Chips";
             case 2 -> name = "Chorritos";
-            case 3 -> name = "Spryte";
-            case 4 -> name = "Cheezos";
+            case 3 -> name = "Cheezos";
+            case 4 -> name = "Hot Cheezos";
             case 5 -> name = "Titos";
             case 6 -> name = "Sunrise Chips";
             default -> {
@@ -207,37 +206,30 @@ public class UserInterface {
             }
         }
 
-        String size = null;
-        double price = 0;
-        switch (drinkSizeInput) {
-            case 1 -> {
-                System.out.println("You Selected: SMALL");
-                size = "SMALL";
-                price = 2.00;
-            }
-            case 2 -> {
-                System.out.println("You Selected: MEDIUM");
-                size = "MEDIUM";
-                price = 2.50;
-            }
-            case 3 -> {
-                System.out.println("You Selected: LARGE");
-                size = "LARGE";
-                price = 3.00;
-            }
-            default -> {
-                System.out.println("No Size Selected");
-                break;
-            }
-        }
-
-        Drink drink = new Drink(name, price, size);
-        order.addItem(drink);
-        System.out.println("Your Drink Selection: " + drink);
+        Chips chips = new Chips(name,price);
+        order.addItem(chips);
+        System.out.println("Your Chips Selection: " + chips);
 
     }
 
     private static void uiCheckOut() {
+        order.displayOrder();
+
+        System.out.println("\nHow much would you like to Pay?");
+        System.out.print("Enter Here: $");
+
+        double payment = scanner.nextDouble();
+
+        if (payment >= order.calculateTotal()) {
+            System.out.println("Receipt");
+            System.out.println("______________________");
+            System.out.println("Subtotal: " + order.calculateSubtotal());
+            System.out.println("Tax: " + order.calculateTax());
+            System.out.println("Total: " + order.calculateTotal());
+        } else {
+            System.err.println("Not Enough Moolah");
+        }
+
     }
 
 
