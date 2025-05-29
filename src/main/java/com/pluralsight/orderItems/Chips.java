@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.orderItems;
+
+import com.pluralsight.Priceable;
 
 public class Chips implements Priceable {
 

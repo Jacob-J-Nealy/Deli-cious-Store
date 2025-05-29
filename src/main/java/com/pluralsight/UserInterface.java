@@ -1,5 +1,8 @@
 package com.pluralsight;
 
+import com.pluralsight.orderItems.Chips;
+import com.pluralsight.orderItems.Drink;
+
 import java.util.Scanner;
 
 public class UserInterface {
