@@ -39,13 +39,19 @@ public class Drink implements Priceable {
     }
 
     @Override
-    public double getPrice() {
-        if(size.equalsIgnoreCase("Small")){
-            return 2.00;
+    public double calculatePrice() {
+        if(size.equalsIgnoreCase("SMALL")){
+            this.price = 2.00;
         }
-        return 2;
-    }
-    public void setPrice(double price) {
-        this.price = price;
+
+        if (size.equalsIgnoreCase("MEDIUM")) {
+            this.price = 2.50;
+        }
+
+        if (size.equalsIgnoreCase("LARGE")) {
+            this.price = 3.00;
+        }
+
+        return 0;
     }
 }

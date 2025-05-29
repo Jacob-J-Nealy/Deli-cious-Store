@@ -2,5 +2,5 @@ package com.pluralsight;
 
 public interface Priceable {
 
-    public double getPrice();
+    public double calculatePrice();
 }

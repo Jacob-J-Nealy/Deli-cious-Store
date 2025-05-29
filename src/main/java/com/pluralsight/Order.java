@@ -20,7 +20,7 @@ public class Order {
     public double calculateSubtotal() {
         double total = 0;
         for (Priceable item : items) {
-            total += item.getPrice();
+            total += item.calculatePrice();
         }
         return total;
     }

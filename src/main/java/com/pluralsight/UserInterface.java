@@ -3,10 +3,10 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class UserInterface {
-    private static Scanner scanner = new Scanner(System.in);
-    private static Order order;
+    private Scanner scanner = new Scanner(System.in);
+    private Order order;
 
-    public static void uiHomeScreen() {
+    public void uiHomeScreen() {
 
         // Display HomeScreen
         int homeScreenInput = -1;
@@ -34,7 +34,7 @@ public class UserInterface {
         }
 
     }
-    public static void uiNewOrderScreen() {
+    public void uiNewOrderScreen() {
         int newOrderInput = -1;
         boolean running = true;
 
@@ -70,7 +70,7 @@ public class UserInterface {
             }
         }
     }
-    private static void uiDrinkSelectionScreen() {
+    private void uiDrinkSelectionScreen() {
         int drinkSelectInput;
 
         while (true) {
@@ -133,17 +133,14 @@ public class UserInterface {
             case 1 -> {
                 System.out.println("You Selected: SMALL");
                 size = "SMALL";
-                price = 2.00;
             }
             case 2 -> {
                 System.out.println("You Selected: MEDIUM");
                 size = "MEDIUM";
-                price = 2.50;
             }
             case 3 -> {
                 System.out.println("You Selected: LARGE");
                 size = "LARGE";
-                price = 3.00;
             }
             default -> {
                 System.out.println("No Size Selected");
@@ -151,17 +148,18 @@ public class UserInterface {
             }
         }
 
-        Drink drink = new Drink(name, price, size);
+        Drink drink = new Drink(name,price , size);
+        drink.calculatePrice();
         order.addItem(drink);
         System.out.println("Your Drink Selection: " + drink);
 
     }
 
-    private static void uiSandwichSelection() {
+    private void uiSandwichSelection() {
 
     }
 
-    private static void uiChipsSelection() {
+    private void uiChipsSelection() {
         int chipsSelectInput;
 
         while (true) {
@@ -212,7 +210,7 @@ public class UserInterface {
 
     }
 
-    private static void uiCheckOut() {
+    private void uiCheckOut() {
         order.displayOrder();
 
         System.out.println("\nHow much would you like to Pay?");

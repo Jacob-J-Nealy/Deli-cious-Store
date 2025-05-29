@@ -25,7 +25,7 @@ public class Chips implements Priceable {
     }
 
     @Override
-    public double getPrice() {
+    public double calculatePrice() {
         return price = 1.50;
     }
 
