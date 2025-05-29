@@ -12,7 +12,15 @@ public class CustomSandwich implements Priceable {
     private int size;
     private Bread bread;
     private List<Toppings> toppingsList;
-    private boolean toasted;
+    private boolean isToasted;
+
+    //Constructor
+    public CustomSandwich(int size, Bread bread, List<Toppings> toppingsList, boolean isToasted) {
+        this.size = size;
+        this.bread = bread;
+        this.toppingsList = toppingsList;
+        this.isToasted = isToasted;
+    }
 
     private void getBread() {
     }

@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import com.pluralsight.orderItems.Chips;
+import com.pluralsight.orderItems.CustomSandwich;
 import com.pluralsight.orderItems.Drink;
 
 import java.util.HashMap;
@@ -83,9 +84,21 @@ public class UserInterface {
             System.out.println("\n     ---Sandwich Size Selection Screen---");
             System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
             System.out.println("\n|   4' Inch   |   8' Inch   |   12' Inch   |");
-            System.out.print("Enter Here: ");
+            System.out.print("Enter Number Here: ");
             int sizeChoice = scanner.nextInt();
             scanner.nextLine(); // scanner eater
+
+            switch (sizeChoice) {
+                case 4:
+                    sizeChoice = 4;
+                    break;
+                case 8:
+                    sizeChoice = 8;
+                    break;
+                case 12:
+                    sizeChoice = 12;
+                    break;
+            }
             System.out.println("__________________________________________________");
 
 
@@ -95,7 +108,16 @@ public class UserInterface {
 
             System.out.print("Enter Here: ");
             int typeChoice = scanner.nextInt();
+            String bread;
             scanner.nextLine(); // scanner eater
+
+            switch (typeChoice) {
+                case 1:
+                    bread = "White";
+                    break;
+                case 2:
+            }
+
             System.out.println("__________________________________________________");
 
 
@@ -172,6 +194,7 @@ public class UserInterface {
                 System.out.println();
                 System.out.print("Enter Here: ");
                 int toppingsChoice = scanner.nextInt();
+                scanner.nextLine(); // scanner eater
 
                 if (toppingsChoice == 0) {
                     done = true;
@@ -182,6 +205,24 @@ public class UserInterface {
                     System.out.println("❌ Invalid Input. Try Again.");
                 }
             }
+            System.out.println("__________________________________________________");
+
+            boolean isToasted;
+            System.out.println("---Toasted?---");
+            System.out.println("Y: yes");
+            System.out.println("N: no");
+
+            System.out.print("Enter Here: ");
+            String toastedChoice = scanner.nextLine();
+
+            if (toastedChoice == "Y") {
+                isToasted = true;
+            } else if (toastedChoice == "N") {
+                isToasted = false;
+            }
+
+            CustomSandwich sandwich = new CustomSandwich();
+
         }
     }
     private void uiDrinkSelectionScreen() {
