@@ -1,0 +1,17 @@
+-------- Your Order --------
+
+Custom Sandwich 8'
+Wheat Bread | Toasted: true
+
+Toppings:
+- Lettuce
+- Salami
+- Chicken
+
+Total: $10.00
+
+Subtotal: $10.00
+Tax (6%): $0.60
+Total: $10.60
+Payment: $11.00
+Change Due: $0.40

@@ -29,6 +29,7 @@ public class UserInterface {
         System.out.print("\nInput Here: ");
         homeScreenInput = scanner.nextInt();
 
+        // Switch Case to Switch into New Order Screen
         switch (homeScreenInput) {
             case 1:
                 order = new Order();
@@ -74,7 +75,7 @@ public class UserInterface {
                 case 0 -> {
                     System.out.println("_____________________________________________");
                     System.out.println("Canceling Order...");
-                    running = false;
+                    return;
                 }
                 default -> System.err.println("Incorrect Input. Returning to Home Screen...");
             }
