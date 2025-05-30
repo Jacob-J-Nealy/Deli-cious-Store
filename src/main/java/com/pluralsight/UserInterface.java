@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import com.pluralsight.orderItems.BLT;
 import com.pluralsight.orderItems.Chips;
 import com.pluralsight.orderItems.CustomSandwich;
 import com.pluralsight.orderItems.Drink;
@@ -62,6 +63,7 @@ public class UserInterface {
             System.out.println("2) Add Drink");
             System.out.println("3) Add Chips");
             System.out.println("4) Checkout");
+            System.out.println("5) *Add BLT (Preset)*");
             System.out.println("\n0) Cancel Order");
             System.out.print("\nInput Here: ");
             newOrderInput = scanner.nextInt();
@@ -72,6 +74,7 @@ public class UserInterface {
                 case 2 -> uiDrinkSelectionScreen();
                 case 3 -> uiChipsSelection();
                 case 4 -> uiCheckOut();
+                case 5 -> uiBltSelection();
                 case 0 -> {
                     System.out.println("_____________________________________________");
                     System.out.println("Canceling Order...");
@@ -454,6 +457,11 @@ public class UserInterface {
 
         }
 
+    }
+    private void uiBltSelection() {
+        BLT blt = new BLT();
+        order.addItem(blt);
+        System.out.println("✅ Added " + blt);
     }
 
 
