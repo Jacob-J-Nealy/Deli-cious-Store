@@ -9,6 +9,10 @@ public class Cheese extends Toppings {
         super(name, true);
     }
 
+    /**
+     * This Method Calculates:
+     * - The Initial Price of Cheese Based on the Size of the Sandwich
+     */
     @Override
     public double calculatePrice(int size) {
         if (size == 4) {
