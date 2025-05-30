@@ -1,0 +1,23 @@
+-------- Your Order --------
+
+Custom Sandwich 12'
+White Bread | Toasted: true
+
+Toppings:
+- American Cheese
+- Mayo
+- Steak
+- Lettuce
+- Bell Peppers
+
+Total: $14.65
+
+LARGE 7-UP - $3.00
+
+Cheezos - $1.50
+
+Subtotal: $19.15
+Tax (6%): $1.15
+Total: $20.30
+Payment: $25.00
+Change Due: $4.70

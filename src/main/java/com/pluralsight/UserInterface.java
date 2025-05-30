@@ -422,34 +422,25 @@ public class UserInterface {
     }
     private void uiCheckOut() {
         order.displayOrder();
-
-        System.out.println("\nHow much would you like to Pay?");
-        System.out.print("Enter Here: $");
-
-        OrderFileManager orderFileManager = new OrderFileManager();
-
-        orderFileManager.printReceipt(order);
-
-
+        double payment = 0;
         boolean paying = true;
 
-//        while (paying) {
-//
-//            double payment = scanner.nextDouble();
-//            if (payment >= order.calculateTotal()) {
-//                System.out.println("Receipt");
-//                System.out.println("______________________");
-//                System.out.printf("Subtotal:   $%.2f\n", order.calculateSubtotal());
-//                System.out.printf("Tax:        $%.2f\n", order.calculateTax());
-//                System.out.printf("Total:      $%.2f\n", order.calculateTotal());
-//                System.out.printf("Payment:    $%.2f\n", payment);
-//                System.out.printf("Change Due: $%.2f\n", payment - order.calculateTotal());
-//                paying = false;
-//            } else {
-//                System.err.print("Not Enough Moolah. Try Again: ");
-//            }
-//
-//        }
+        while (paying) {
+            System.out.println("\nHow much would you like to Pay?");
+            System.out.print("Enter Here: $");
+            payment = scanner.nextDouble();
+
+            if (payment >= order.calculateTotal()) {
+
+                OrderFileManager orderFileManager = new OrderFileManager();
+                orderFileManager.printReceipt(order, payment);
+                paying = false;
+            } else {
+                System.err.println("Not enough Money Try Again.");
+            }
+
+        }
+
     }
 
 
