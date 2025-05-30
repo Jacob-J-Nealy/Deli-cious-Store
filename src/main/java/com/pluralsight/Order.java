@@ -38,10 +38,20 @@ public class Order {
     public void displayOrder() {
         System.out.println("--------Your Order--------");
 
+        int itemNumber = 1;
         for (Priceable item : items) {
+            System.out.printf("Order Item %d:\n", itemNumber++);
             System.out.println(item);
+            System.out.println("_________________________________________");
         }
-        System.out.printf("Total: $%.2f", calculateSubtotal());
+
+        double subtotal = calculateSubtotal();
+        double tax = calculateTax();
+        double total = calculateTotal();
+
+        System.out.printf("Subtotal: $%.2f\n", subtotal);
+        System.out.printf("Tax:      $%.2f\n", tax);
+        System.out.printf("Total:    $%.2f\n", total);
     }
 
 
