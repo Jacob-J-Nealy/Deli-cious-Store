@@ -203,10 +203,11 @@ public class UserInterface {
                 if (toppingsChoice == 0) {
                     done = true;
                 } else if (toppingsSelectionMap.containsKey(toppingsChoice)) {
-                    String toppingName = toppingsSelectionMap.get(toppingsChoice);
-                    Toppings toppings = new Toppings(toppingName, false);
 
-                    System.out.println("✅ Added: " + toppingName);
+                    Toppings toppings = toppingsSelectionMap.get(toppingsChoice);
+                    toppingsList.add(toppings);
+                    System.out.println("✅ Added: " + toppings.getName());
+
                 } else {
                     System.out.println("❌ Invalid Input. Try Again.");
                 }
