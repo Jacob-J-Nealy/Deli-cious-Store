@@ -151,7 +151,7 @@ public class UserInterface {
 
             boolean done = false;
 
-            Map<Integer, String> toppingsSelectionMap = new HashMap<>();
+            Map<Integer, Toppings> toppingsSelectionMap = new HashMap<>();
 
             // Regular Toppings
             toppingsSelectionMap.put(1,"Lettuce");
