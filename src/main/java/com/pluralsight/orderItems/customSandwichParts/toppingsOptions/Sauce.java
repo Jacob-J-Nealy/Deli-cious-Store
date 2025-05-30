@@ -9,6 +9,7 @@ public class Sauce extends Toppings {
         super(name, isPremium);
     }
 
+    // Sauce Method
     @Override
     public double calculatePrice(int size) {
         return 0; // Sauces are free
