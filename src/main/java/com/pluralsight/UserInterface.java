@@ -8,6 +8,7 @@ import com.pluralsight.orderItems.customSandwichParts.Toppings;
 import com.pluralsight.orderItems.customSandwichParts.toppingsOptions.Cheese;
 import com.pluralsight.orderItems.customSandwichParts.toppingsOptions.Meat;
 import com.pluralsight.orderItems.customSandwichParts.toppingsOptions.RegularToppings;
+import com.pluralsight.orderItems.customSandwichParts.toppingsOptions.Sauce;
 
 import java.util.*;
 
@@ -157,15 +158,15 @@ public class UserInterface {
             Map<Integer, Toppings> toppingsSelectionMap = new HashMap<>();
 
             // Regular Toppings
-            toppingsSelectionMap.put(1,  new RegularToppings("Lettuce"));
-            toppingsSelectionMap.put(2,  new RegularToppings("Bell Peppers"));
-            toppingsSelectionMap.put(3,  new RegularToppings("Onion"));
-            toppingsSelectionMap.put(4,  new RegularToppings("Tomatoes"));
-            toppingsSelectionMap.put(5,  new RegularToppings("Jalapenos"));
-            toppingsSelectionMap.put(6,  new RegularToppings("Cucumbers"));
-            toppingsSelectionMap.put(7,  new RegularToppings("Pickles"));
-            toppingsSelectionMap.put(8,  new RegularToppings("Spinach"));
-            toppingsSelectionMap.put(10, new RegularToppings("Mushrooms"));
+            toppingsSelectionMap.put(1,  new RegularToppings("Lettuce",      false));
+            toppingsSelectionMap.put(2,  new RegularToppings("Bell Peppers", false));
+            toppingsSelectionMap.put(3,  new RegularToppings("Onion",        false));
+            toppingsSelectionMap.put(4,  new RegularToppings("Tomatoes",     false));
+            toppingsSelectionMap.put(5,  new RegularToppings("Jalapenos",    false));
+            toppingsSelectionMap.put(6,  new RegularToppings("Cucumbers",    false));
+            toppingsSelectionMap.put(7,  new RegularToppings("Pickles",      false));
+            toppingsSelectionMap.put(8,  new RegularToppings("Spinach",      false));
+            toppingsSelectionMap.put(10, new RegularToppings("Mushrooms",    false));
 
             // Meat
             toppingsSelectionMap.put(11, new Meat("Steak",      true));
@@ -182,12 +183,12 @@ public class UserInterface {
             toppingsSelectionMap.put(20, new Cheese("Swiss Cheese",     true));
 
             //Sauce
-            toppingsSelectionMap.put(21,"Mayo");
-            toppingsSelectionMap.put(22,"Mustard");
-            toppingsSelectionMap.put(23,"Ketchup");
-            toppingsSelectionMap.put(24,"Ranch");
-            toppingsSelectionMap.put(25,"Thousand Island");
-            toppingsSelectionMap.put(26,"Vinaigrette");
+            toppingsSelectionMap.put(21, new Sauce("Mayo",            false));
+            toppingsSelectionMap.put(22, new Sauce("Mustard",         false));
+            toppingsSelectionMap.put(23, new Sauce("Ketchup",         false));
+            toppingsSelectionMap.put(24, new Sauce("Ranch",           false));
+            toppingsSelectionMap.put(25, new Sauce("Thousand Island", false));
+            toppingsSelectionMap.put(26, new Sauce("Vinaigrette",     false));
 
             List<Toppings> toppingsList = new ArrayList<>();
 
