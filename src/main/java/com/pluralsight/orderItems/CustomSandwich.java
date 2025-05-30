@@ -10,13 +10,13 @@ import java.util.List;
 
 public class CustomSandwich implements Priceable {
 
-    //Properties
+    // CustomSandwich Properties
     private int size;
     private Bread bread;
     private List<Toppings> toppingsList;
     private boolean isToasted;
 
-    //Constructor
+    // CustomSandwich Constructor
     public CustomSandwich(int size, Bread bread, List<Toppings> toppingsList, boolean isToasted) {
         this.size = size;
         this.bread = bread;
@@ -24,7 +24,7 @@ public class CustomSandwich implements Priceable {
         this.isToasted = isToasted;
     }
 
-    // CustomSandwich toString
+    // CustomSandwich toString (using StringBuilder)
     @Override
     public String toString() {
 
@@ -43,8 +43,15 @@ public class CustomSandwich implements Priceable {
 
         return sandwichBuilder.toString();
     }
-    
 
+
+    /**
+     * This Method calculates:
+     * - The Price of the Sandwich based on the User Selected Size
+     * - The Extra Cost based on if the User Decided to Get Extra Meat
+     * - The Extra Cost based on if the User Decided to Get Extra Cheese
+     * - The Total Price of All the Toppings
+     */
     @Override
     public double calculatePrice() {
 
