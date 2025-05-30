@@ -15,12 +15,14 @@ In other words, I am going to make use of OOP concepts throughout this process.
  because it took me significantly longer to finish the UML diagram which is a requirement to even start making the program. Even faced with this circumstance I made the decision to not allow for this situation to cut me down. 
  Instead I made the decision to press forward and do everything I could to get the best grade possible on this Capstone. My goal was a simple one. 
  
- To recieve a score of 10/10 Leading besting my Capstone Grade of 9/10 on our last Capstone.
+ To pass this Capstone like the last one despite the challenges.
  I will show myself that when faced with unforeseen circumstances that I can still find success, even greater than the success I have already accomplished.
  This application is birthed from my perseverance, grit, long sleepless nights, and personal dedication to deliver excellent results/work.
  I hope you enjoy it and this inspires you to see that you can always overcome your challenges and do the same.
- 
-![Class Diagram](C:\Users\jacob\Desktop\pluralsight\capstones\FinancialTracker)
+
+ ## Class Diagram
+ ![image](https://github.com/user-attachments/assets/bd14f2da-6e1c-4a7d-8ba1-dbb576e295ed)
+
 
 ## User Stories (Generated)
 Throughout the development of this application, these User Stories played a role in shaping my process and decisions. 
@@ -66,33 +68,21 @@ I'm excited to share how these User Stories guided the evolution of the applicat
 
 ## Setup (Generated)
 Instructions on how to set up and run the project using IntelliJ IDEA.
-
 1. Open IntelliJ IDEA
    Launch IntelliJ.
-
 On the welcome screen, click "New Project" or "Open" if you already have the folder.
-
 2. Create or Open a Java Project
    If creating new:
-
 Choose "Java".
-
 Make sure SDK is selected (download one if not).
-
 Click Next > Finish.
-
 If opening an existing project:
-
 Go to File > Open and select your project folder.
-
 3. Add a New Java Class (if needed)
    Right-click src > New > Java Class
-
 Name it Main (or your preferred name).
-
 4. Write or Paste Your Code
    Paste your public static void main(String[] args) method in the class.
-
 5. Run the Program
    Click the green ▶ Run button near your main() method, or
 
