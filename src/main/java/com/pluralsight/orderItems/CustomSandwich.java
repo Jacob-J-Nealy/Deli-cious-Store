@@ -87,7 +87,8 @@ public class CustomSandwich implements Priceable {
                 } else {
                     switch (size) {
                         case 4: total += 0.30; break;
-                        ca
+                        case 8: total += 0.60; break;
+                        case 12: total += 0.90; break;
                     }
                 }
             }
