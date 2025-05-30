@@ -223,14 +223,18 @@ public class UserInterface {
             System.out.print("Enter Here: ");
             String toastedChoice = scanner.nextLine();
 
+            isToasted = false;
             if (toastedChoice.equalsIgnoreCase("Y")) {
                 isToasted = true;
             } else if (toastedChoice.equalsIgnoreCase("N")) {
                 isToasted = false;
             }
 
-           CustomSandwich sandwich = new CustomSandwich(sizeChoice, breadChoice,   );
-
+           CustomSandwich sandwich = new CustomSandwich(sizeChoice, breadChoice, toppingsList, isToasted);
+            double price = sandwich.calculatePrice();
+            order.addItem(sandwich);
+            System.out.println("Your Custom Sandwich: " + sandwich);
+            return;
         }
     }
     private void uiDrinkSelectionScreen() {

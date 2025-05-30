@@ -22,6 +22,16 @@ public class CustomSandwich implements Priceable {
         this.isToasted = isToasted;
     }
 
+    @Override
+    public String toString() {
+        return "CustomSandwich{" +
+                "size=" + size +
+                ", bread=" + bread +
+                ", toppingsList=" + toppingsList +
+                ", isToasted=" + isToasted +
+                '}';
+    }
+
     private void getBread() {
     }
 
