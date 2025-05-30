@@ -43,9 +43,7 @@ public class CustomSandwich implements Priceable {
 
         return sandwichBuilder.toString();
     }
-
-    // Getters & Setters
-
+    
 
     @Override
     public double calculatePrice() {

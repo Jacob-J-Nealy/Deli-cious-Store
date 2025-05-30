@@ -37,6 +37,7 @@ public class Order {
 
     public void displayOrder() {
         System.out.println("--------Your Order--------");
+
         for (Priceable item : items) {
             System.out.println(item);
         }

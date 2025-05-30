@@ -265,6 +265,7 @@ public class UserInterface {
             System.out.print("Enter Here: ");
             while (toastedSelecting) {
                 String toastedChoice = scanner.nextLine();
+                System.out.println();
 
 
                 isToasted = false;
