@@ -8,22 +8,16 @@ public class Order {
     // Properties
     private List<Priceable> items = new ArrayList<>();
 
+    // Order Methods
     public List<Priceable> getItems() {
         return items;
     }
-
-    public void setItems(List<Priceable> items) {
-        this.items = items;
-    }
-
-    // Custom Methods
-
-
 
     public void addItem(Priceable item) {
         items.add(item);
     }
 
+    // Calculate Order Total Methods
     public double calculateSubtotal() {
         double total = 0;
         for (Priceable item : items) {
@@ -42,6 +36,7 @@ public class Order {
         return total;
     }
 
+    // Display Order Method
     public void displayOrder() {
         System.out.println("--------Your Order--------");
 
