@@ -10,7 +10,6 @@ public class Meats extends Toppings {
         super(name, true);
     }
 
-    // Fix This
     @Override
     public double calculatePrice(int size) {
         if (size == 4) {
