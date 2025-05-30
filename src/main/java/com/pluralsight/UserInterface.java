@@ -230,10 +230,11 @@ public class UserInterface {
                 isToasted = false;
             }
 
-           CustomSandwich sandwich = new CustomSandwich(sizeChoice, breadChoice, toppingsList, isToasted);
+            CustomSandwich sandwich = new CustomSandwich(sizeChoice, breadChoice, toppingsList, isToasted);
             double price = sandwich.calculatePrice();
             order.addItem(sandwich);
             System.out.println("Your Custom Sandwich: " + sandwich);
+            System.out.println("🥪 Your Custom Sandwich was added to your order!");
             return;
         }
     }
