@@ -15,12 +15,14 @@ In other words, I am going to make use of OOP concepts throughout this process.
  because it took me significantly longer to finish the UML diagram which is a requirement to even start making the program. Even faced with this circumstance I made the decision to not allow for this situation to cut me down. 
  Instead I made the decision to press forward and do everything I could to get the best grade possible on this Capstone. My goal was a simple one. 
  
- To recieve a score of 10/10 Leading besting my Capstone Grade of 9/10 on our last Capstone.
+ To pass this Capstone like the last one despite the challenges.
  I will show myself that when faced with unforeseen circumstances that I can still find success, even greater than the success I have already accomplished.
  This application is birthed from my perseverance, grit, long sleepless nights, and personal dedication to deliver excellent results/work.
  I hope you enjoy it and this inspires you to see that you can always overcome your challenges and do the same.
- 
-![Class Diagram](C:\Users\jacob\Desktop\pluralsight\capstones\FinancialTracker)
+
+ ## Class Diagram
+ ![image](https://github.com/user-attachments/assets/bd14f2da-6e1c-4a7d-8ba1-dbb576e295ed)
+
 
 ## User Stories (Generated)
 Throughout the development of this application, these User Stories played a role in shaping my process and decisions. 
@@ -66,36 +68,23 @@ I'm excited to share how these User Stories guided the evolution of the applicat
 
 ## Setup (Generated)
 Instructions on how to set up and run the project using IntelliJ IDEA.
-
 1. Open IntelliJ IDEA
    Launch IntelliJ.
-
 On the welcome screen, click "New Project" or "Open" if you already have the folder.
-
 2. Create or Open a Java Project
    If creating new:
-
 Choose "Java".
-
 Make sure SDK is selected (download one if not).
-
 Click Next > Finish.
-
 If opening an existing project:
-
 Go to File > Open and select your project folder.
-
 3. Add a New Java Class (if needed)
    Right-click src > New > Java Class
-
 Name it Main (or your preferred name).
-
 4. Write or Paste Your Code
    Paste your public static void main(String[] args) method in the class.
-
 5. Run the Program
    Click the green ▶ Run button near your main() method, or
-
 Right-click the file > Run 'Main.main()'
 
 ### Prerequisites
@@ -117,41 +106,34 @@ Follow these steps to get your application running within IntelliJ IDEA:
 - Java 17 Maven.
 
 ## Demo
+![image](https://github.com/user-attachments/assets/0ef7b66d-014b-4dd3-bf2e-c6d63daa66b4)
+![image](https://github.com/user-attachments/assets/020c1cd4-1675-4bc9-927e-b71d8009088e)
+![image](https://github.com/user-attachments/assets/3c932d69-6719-4b96-9c94-08d4d11830a5)
 
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045201.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045033.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20044618.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045308.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045455.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045622.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20050019.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20050105.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20050122.png)
+
+
+
 ## Future Work
-
-Outline potential future enhancements or functionalities you might consider adding:
-
-- Custom Transaction Search
-- Improvement of current functionalities.
-- Try/Catches for all User input errors
-- User Login to Display only certain information from csv
+- Editing Receipt to Show Quantities of Orders
+- Add Signature Sandwiches/ Combos that the User can Select
+- Saving Customer's Name and Printing it on the Receipt
 
 
 - [ChatGPT](https://chatgpt.com/)
-- [Effective Java](https://www.example.com)
-
+- [Raymond's Potato Sensei](https://chatgpt.com/g/g-681d378b0c90819197b16e49abe384ec-potato-sensei)
+- 
 ## Team Members
 
-- **Jacob Nealy** - Main Creator
+- **Jacob Nealy** - Solo Developer (Future DevOps Engineer)
 
 ## Thanks
 
 Shout Out to my Potato Instructor Raymond Mourn for his french fry guidance
+Shout Out to Potato Sensei AI for all the Tips and Advice
+Shout Out to Walter Donnellan (My Tutor) for sacrificing his lunch breaks and extra time to tutor me
+Shoutout Out to Tiffany Obi for being the realest Tutor out there! 
 
-Shout out to Walter Donnellan (My Tutor) for sacrificing his lunch breaks and extra time to tutor me
-
-Shoutout Tiffany Obi for help during Breaks
-
-- A special thanks to all classmates for their dedication and teamwork.
+- A special thanks to all classmates for their encouragement.
+- Adam Jessie for the Idea of diplaying Options in Capstone 1 (completely stole that idea this time around)
 - #FullStackFryers
 - #SigmaData
