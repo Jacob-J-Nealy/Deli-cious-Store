@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class OrderFileManager {
 
-    private void printReceipt() {
+    private static final String ReceiptsDirectory = "receipts";
+
+    public void printReceipt(Order order) {
         Scanner scanner = new Scanner(System.in);
-        Order order = new Order();
         boolean paying = true;
 
         while (paying) {
 
             double payment = scanner.nextDouble();
             if (payment >= order.calculateTotal()) {
-                System.out.println("Receipt");
+                System.out.println("\nReceipt");
                 System.out.println("______________________");
                 System.out.printf("Subtotal:   $%.2f\n", order.calculateSubtotal());
                 System.out.printf("Tax:        $%.2f\n", order.calculateTax());
@@ -27,4 +28,6 @@ public class OrderFileManager {
 
         }
     }
+
+    private void saveReceiptToFile()
 }
