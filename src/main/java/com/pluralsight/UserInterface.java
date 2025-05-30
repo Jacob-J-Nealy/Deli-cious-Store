@@ -374,6 +374,7 @@ public class UserInterface {
     private void uiChipsSelection() {
         int chipsSelectInput;
 
+        // Chip Selection While Loop
         while (true) {
             System.out.println("🍟 Chips Selection Screen");
             System.out.println("_____________________________________________");
@@ -424,6 +425,7 @@ public class UserInterface {
     private void uiCheckOut() {
         order.displayOrder();
 
+        // Checkout Confirmation (Y or N)
         System.out.println("Would you like to Checkout Your Order (Y or N)?");
         System.out.print("Enter Here: ");
         String confirmCheckout = scanner.nextLine();
@@ -435,6 +437,7 @@ public class UserInterface {
         double payment = 0;
         boolean paying = true;
 
+        // Payment Loop
         while (paying) {
             System.out.println("\nHow much would you like to Pay?");
             System.out.print("Enter Here: $");
