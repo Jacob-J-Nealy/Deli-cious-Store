@@ -84,6 +84,7 @@ public class UserInterface {
         int drinkSelectInput;
         int sizeChoice = 0;
         Bread breadChoice = null;
+        int toppingsChoice = 0;
         boolean isToasted = false;
 
 
@@ -112,7 +113,8 @@ public class UserInterface {
                     }
                 }
             } catch (Exception e) {
-                System.err.println("Invalid Input. Enter a Number for Size Choice");
+                System.err.print("Invalid Input. Enter a Number for Size Choice: ");
+                scanner.nextLine();
             }
             }
             System.out.println("__________________________________________________");
@@ -139,11 +141,12 @@ public class UserInterface {
                     }
 
                     if (typeChoice == 1 || typeChoice == 2 || typeChoice == 3 || typeChoice == 4) {
-                        System.out.println("✅ You Selected: " + breadChoice + "Bread");
+                        System.out.println("✅ You Selected: " + breadChoice + " Bread");
                         breadSelecting = false;
                     }
                 } catch (Exception e) {
-                    System.err.print("Invalid Bread Choice. Please choose from corresponding Numbers above: ");
+                    System.err.print("❌ Invalid Bread Choice. Please choose from corresponding Numbers above: ");
+                    scanner.nextLine();
                 }
             }
             System.out.println("__________________________________________________");
@@ -197,6 +200,7 @@ public class UserInterface {
             toppingsSelectionMap.put(6,  new RegularToppings("Cucumbers",    false));
             toppingsSelectionMap.put(7,  new RegularToppings("Pickles",      false));
             toppingsSelectionMap.put(8,  new RegularToppings("Spinach",      false));
+            toppingsSelectionMap.put(9, new RegularToppings("Guacamole",     false));
             toppingsSelectionMap.put(10, new RegularToppings("Mushrooms",    false));
 
             // Meat
@@ -227,8 +231,14 @@ public class UserInterface {
                 System.out.println("(Enter 0 when finished)");
                 System.out.println();
                 System.out.print("Enter Here: ");
-                int toppingsChoice = scanner.nextInt();
-                scanner.nextLine(); // scanner eater
+
+                try {
+                    toppingsChoice = scanner.nextInt();
+                    scanner.nextLine(); // scanner eater
+                } catch (Exception e) {
+                    System.err.println("❌ Invalid Input. Please Enter from the Corresponding Numbers: ");
+                    scanner.nextLine();
+                }
 
                 // toppingsList.add(toppingsChoice);
                 if (toppingsChoice == 0) {
@@ -240,7 +250,7 @@ public class UserInterface {
                     System.out.println("✅ Added: " + toppings.getName());
 
                 } else {
-                    System.out.println("❌ Invalid Input. Try Again.");
+                    System.err.println("❌ Invalid Input. Try Again.");
                 }
             }
             System.out.println("__________________________________________________");
