@@ -431,9 +431,9 @@ public class UserInterface {
         if (payment >= order.calculateTotal()) {
             System.out.println("Receipt");
             System.out.println("______________________");
-            System.out.println("Subtotal: " + order.calculateSubtotal());
-            System.out.println("Tax: " + order.calculateTax());
-            System.out.println("Total: " + order.calculateTotal());
+            System.out.printf("Subtotal: $%.2f\n", order.calculateSubtotal());
+            System.out.printf("Tax: " + order.calculateTax());
+            System.out.printf("Total: " + order.calculateTotal());
         } else {
             System.err.println("Not Enough Moolah");
         }
