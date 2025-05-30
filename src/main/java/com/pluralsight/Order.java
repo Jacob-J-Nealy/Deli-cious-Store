@@ -8,6 +8,13 @@ public class Order {
     // Properties
     private List<Priceable> items = new ArrayList<>();
 
+    public List<Priceable> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Priceable> items) {
+        this.items = items;
+    }
 
     // Custom Methods
 

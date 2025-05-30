@@ -26,6 +26,7 @@ public class OrderFileManager {
                 System.out.printf("Total:      $%.2f\n", order.calculateTotal());
                 System.out.printf("Payment:    $%.2f\n", payment);
                 System.out.printf("Change Due: $%.2f\n", payment - order.calculateTotal());
+                saveReceiptToFile(order, payment);
                 paying = false;
             } else {
                 System.err.print("Not Enough Moolah. Try Again: ");
@@ -45,6 +46,7 @@ public class OrderFileManager {
         String filename = LocalDateTime.now().format(formatter) + ".txt";
 
 
+        File receiptFile = new File(directory, filename);
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(receiptFile))) {
             writer.write("-------- Your Order --------\n\n");
             // Write order details (assuming order.toString() nicely formats all items)
