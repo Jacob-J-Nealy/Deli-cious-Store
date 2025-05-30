@@ -63,7 +63,7 @@ public class UserInterface {
             System.out.println("2) Add Drink");
             System.out.println("3) Add Chips");
             System.out.println("4) Checkout");
-            System.out.println("5) *Add BLT (Preset)*");
+            System.out.println("5) Add Signature Sandwich");
             System.out.println("\n0) Cancel Order");
             System.out.print("\nInput Here: ");
             newOrderInput = scanner.nextInt();
@@ -457,6 +457,18 @@ public class UserInterface {
 
         }
 
+    }
+    private void uiSignatureSandwich() {
+        System.out.println("Which Signature Sandwich would you like to Add?");
+        System.out.println("1) BLT");
+        System.out.println("2) Philly Cheese Steak");
+        System.out.print("Enter Here: ");
+        int signatureSandwichChoice = scanner.nextInt();
+
+        switch (signatureSandwichChoice) {
+            case 1: uiBltSelection();
+            break;
+        }
     }
     private void uiBltSelection() {
         BLT blt = new BLT();
