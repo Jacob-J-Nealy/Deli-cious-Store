@@ -422,6 +422,15 @@ public class UserInterface {
     }
     private void uiCheckOut() {
         order.displayOrder();
+
+        System.out.println("Would you like to Checkout Your Order (Y or N)?");
+        System.out.print("Enter Here: ");
+        String confirmCheckout = scanner.nextLine();
+
+        if (confirmCheckout.equalsIgnoreCase("N")) {
+            return;
+        }
+
         double payment = 0;
         boolean paying = true;
 
