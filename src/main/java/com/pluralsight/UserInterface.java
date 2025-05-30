@@ -176,10 +176,10 @@ public class UserInterface {
             toppingsSelectionMap.put(16, new Meat("Bacon",      true));
 
             // Cheese
-            toppingsSelectionMap.put(17, new Cheese("American Cheese"));
-            toppingsSelectionMap.put(18, new Cheese("Provolone Cheese"));
-            toppingsSelectionMap.put(19, new Cheese("Cheddar Cheese"));
-            toppingsSelectionMap.put(20, new Cheese("Swiss Cheese"));
+            toppingsSelectionMap.put(17, new Cheese("American Cheese",  true));
+            toppingsSelectionMap.put(18, new Cheese("Provolone Cheese", true));
+            toppingsSelectionMap.put(19, new Cheese("Cheddar Cheese",   true));
+            toppingsSelectionMap.put(20, new Cheese("Swiss Cheese",     true));
 
             //Sauce
             toppingsSelectionMap.put(21,"Mayo");
