@@ -28,15 +28,24 @@ public class CustomSandwich implements Priceable {
     @Override
     public String toString() {
 
-        // String Builder Drink Builder
+        // String Builder Sandwich Builder
         StringBuilder sandwichBuilder = new StringBuilder();
-        sandwichBuilder.append("\nCustom Sandwich ").append(size).append("'");
-        sandwichBuilder.append("\n").append(bread).append(" Toasted: ").append(isToasted);
-        sandwichBuilder.append("\n").append(toppingsList);
-        sandwichBuilder.append("\n").append(String.format("$%.2f", calculatePrice()));
+
+        sandwichBuilder.append("Custom Sandwich ").append(size).append("'\n");
+        sandwichBuilder.append(bread.getType()).append(" Bread | Toasted: ").append(isToasted).append("\n\n");
+
+        sandwichBuilder.append("Toppings:\n");
+        for (Toppings topping : toppingsList) {
+            sandwichBuilder.append("- ").append(topping.getName()).append("\n");
+        }
+
+        sandwichBuilder.append("\nTotal: ").append(String.format("$%.2f", calculatePrice()));
 
         return sandwichBuilder.toString();
     }
+
+    // Getters & Setters
+
 
     @Override
     public double calculatePrice() {

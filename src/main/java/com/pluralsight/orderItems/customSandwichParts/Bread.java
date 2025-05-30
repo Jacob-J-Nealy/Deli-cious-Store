@@ -18,4 +18,7 @@ public class Bread {
         return type;
     }
 
+    public String getType() {
+        return type;
+    }
 }
