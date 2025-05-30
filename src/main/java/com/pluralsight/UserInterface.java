@@ -5,6 +5,7 @@ import com.pluralsight.orderItems.CustomSandwich;
 import com.pluralsight.orderItems.Drink;
 import com.pluralsight.orderItems.customSandwichParts.Bread;
 import com.pluralsight.orderItems.customSandwichParts.Toppings;
+import com.pluralsight.orderItems.customSandwichParts.toppingsOptions.RegularToppings;
 
 import java.util.*;
 
@@ -154,16 +155,15 @@ public class UserInterface {
             Map<Integer, Toppings> toppingsSelectionMap = new HashMap<>();
 
             // Regular Toppings
-            toppingsSelectionMap.put(1,"Lettuce");
-            toppingsSelectionMap.put(2,"Bell Peppers");
-            toppingsSelectionMap.put(3,"Onion");
-            toppingsSelectionMap.put(4,"Tomatoes");
-            toppingsSelectionMap.put(5,"Jalapenos");
-            toppingsSelectionMap.put(6,"Cucumbers");
-            toppingsSelectionMap.put(7,"Pickles");
-            toppingsSelectionMap.put(8,"Spinach");
-            toppingsSelectionMap.put(9,"Guacamole");
-            toppingsSelectionMap.put(10,"Mushrooms");
+            toppingsSelectionMap.put(1,  new RegularToppings("Lettuce"));
+            toppingsSelectionMap.put(2,  new RegularToppings("Bell Peppers"));
+            toppingsSelectionMap.put(3,  new RegularToppings("Onion"));
+            toppingsSelectionMap.put(4,  new RegularToppings("Tomatoes"));
+            toppingsSelectionMap.put(5,  new RegularToppings("Jalapenos"));
+            toppingsSelectionMap.put(6,  new RegularToppings("Cucumbers"));
+            toppingsSelectionMap.put(7,  new RegularToppings("Pickles"));
+            toppingsSelectionMap.put(8,  new RegularToppings("Spinach"));
+            toppingsSelectionMap.put(10, new RegularToppings("Mushrooms"));
 
             // Meat
             toppingsSelectionMap.put(11,"Steak");

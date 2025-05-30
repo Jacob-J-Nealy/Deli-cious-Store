@@ -2,11 +2,11 @@ package com.pluralsight.orderItems.customSandwichParts.toppingsOptions;
 
 import com.pluralsight.orderItems.customSandwichParts.Toppings;
 
-public class Meats extends Toppings {
+public class Meat extends Toppings {
 
 
     // Meats Constructor
-    public Meats(String name, boolean isPremium) {
+    public Meat(String name, boolean isPremium) {
         super(name, true);
     }
 
