@@ -24,6 +24,7 @@ public class CustomSandwich implements Priceable {
         this.isToasted = isToasted;
     }
 
+    // CustomSandwich toString
     @Override
     public String toString() {
         return "CustomSandwich{" +
@@ -50,8 +51,12 @@ public class CustomSandwich implements Priceable {
             total += 5.50;
         }
 
-        if (size = 8) {
+        if (size == 8) {
             total += 7.00;
+        }
+
+        if (size == 12) {
+            total += 8.50;
         }
 
         int meatCount = 0;
@@ -59,17 +64,21 @@ public class CustomSandwich implements Priceable {
 
 
         for (Toppings toppings : toppingsList) {
+
             if (toppings instanceof Meat) {
                 meatCount++;
+                if (meatCount > 1) {
+                    total += toppings.calculatePrice(size);
+                }
             }
 
             if (toppings instanceof Cheese) {
                 cheeseCount++;
+                if (cheeseCount > 1) {
+                    total += toppings.calculatePrice(size);
+                }
             }
         }
-
-
-
 
         return total;
     }

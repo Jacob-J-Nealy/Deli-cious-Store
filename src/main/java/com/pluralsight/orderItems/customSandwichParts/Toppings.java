@@ -16,10 +16,12 @@ public abstract class Toppings {
     // Toppings toString (Fix This Later)
     @Override
     public String toString() {
-        return "Toppings{" +
-                "name='" + name + '\'' +
-                ", isPremium=" + isPremium +
-                '}';
+
+        // String Builder Drink Builder
+        StringBuilder toppingsBuilder = new StringBuilder();
+        toppingsBuilder.append("- ").append(name);
+
+        return toppingsBuilder.toString();
     }
 
     //Custom Methods
