@@ -12,6 +12,7 @@ public class Chips implements Priceable {
         this.name = name;
     }
 
+    // Chips toString
     @Override
     public String toString() {
 
@@ -24,14 +25,14 @@ public class Chips implements Priceable {
         return chipBuilder.toString();
     }
 
-    // Getters
+    // Chips Methods
     public String getName() {
         return name;
     }
 
     @Override
     public double calculatePrice() {
-        return 1.50;
+        return 1.50; // All Chips cost the same amount
     }
 
 

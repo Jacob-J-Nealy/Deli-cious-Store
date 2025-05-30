@@ -9,6 +9,7 @@ public class RegularToppings extends Toppings {
         super(name, false);
     }
 
+    // Regular Toppings Methods
     @Override
     public double calculatePrice(int size) {
         return 0; // Regular Toppings are Free

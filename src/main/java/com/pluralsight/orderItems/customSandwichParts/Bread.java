@@ -5,7 +5,7 @@ import com.pluralsight.orderItems.customSandwichParts.toppingsOptions.Meat;
 
 public class Bread {
 
-    //Properties
+    // Bread Properties
     private String type;
 
     public Bread(String type) {
@@ -18,6 +18,7 @@ public class Bread {
         return type;
     }
 
+    // Bread Methods
     public String getType() {
         return type;
     }

@@ -4,16 +4,17 @@ import com.pluralsight.Priceable;
 
 public class Drink implements Priceable {
 
-    // Properties
+    // Drink Properties
     private String name;
     private String size;
 
-    //Constructor
+    // Drink Constructor
     public Drink(String name, String size) {
         this.name = name;
         this.size = size;
     }
 
+    // Drink toString
     @Override
     public String toString() {
 
@@ -27,21 +28,7 @@ public class Drink implements Priceable {
         return drinkBuilder.toString();
     }
 
-    // Getters & Setters
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSize() {
-        return size;
-    }
-    public void setSize(String size) {
-        this.size = size;
-    }
-
+    // Drink Methods
     @Override
     public double calculatePrice() {
         if(size.equalsIgnoreCase("SMALL")){

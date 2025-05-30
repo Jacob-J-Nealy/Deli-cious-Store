@@ -13,7 +13,7 @@ public abstract class Toppings {
         this.isPremium = isPremium;
     }
 
-    // Toppings toString (Fix This Later)
+    // Toppings toString
     @Override
     public String toString() {
 
@@ -24,8 +24,7 @@ public abstract class Toppings {
         return toppingsBuilder.toString();
     }
 
-    //Custom Methods
-
+    // Toppings Methods
     public abstract double calculatePrice(int size);
 
 
