@@ -85,7 +85,6 @@ Name it Main (or your preferred name).
    Paste your public static void main(String[] args) method in the class.
 5. Run the Program
    Click the green ▶ Run button near your main() method, or
-
 Right-click the file > Run 'Main.main()'
 
 ### Prerequisites
@@ -107,41 +106,34 @@ Follow these steps to get your application running within IntelliJ IDEA:
 - Java 17 Maven.
 
 ## Demo
+![image](https://github.com/user-attachments/assets/0ef7b66d-014b-4dd3-bf2e-c6d63daa66b4)
+![image](https://github.com/user-attachments/assets/020c1cd4-1675-4bc9-927e-b71d8009088e)
+![image](https://github.com/user-attachments/assets/3c932d69-6719-4b96-9c94-08d4d11830a5)
 
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045201.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045033.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20044618.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045308.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045455.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20045622.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20050019.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20050105.png)
-![image alt](https://github.com/Jacob-J-Nealy/FinancialTracker/blob/master/Screenshot%202025-05-02%20050122.png)
+
+
+
 ## Future Work
-
-Outline potential future enhancements or functionalities you might consider adding:
-
-- Custom Transaction Search
-- Improvement of current functionalities.
-- Try/Catches for all User input errors
-- User Login to Display only certain information from csv
+- Editing Receipt to Show Quantities of Orders
+- Add Signature Sandwiches/ Combos that the User can Select
+- Saving Customer's Name and Printing it on the Receipt
 
 
 - [ChatGPT](https://chatgpt.com/)
-- [Effective Java](https://www.example.com)
-
+- [Raymond's Potato Sensei](https://chatgpt.com/g/g-681d378b0c90819197b16e49abe384ec-potato-sensei)
+- 
 ## Team Members
 
-- **Jacob Nealy** - Main Creator
+- **Jacob Nealy** - Solo Developer (Future DevOps Engineer)
 
 ## Thanks
 
 Shout Out to my Potato Instructor Raymond Mourn for his french fry guidance
+Shout Out to Potato Sensei AI for all the Tips and Advice
+Shout Out to Walter Donnellan (My Tutor) for sacrificing his lunch breaks and extra time to tutor me
+Shoutout Out to Tiffany Obi for being the realest Tutor out there! 
 
-Shout out to Walter Donnellan (My Tutor) for sacrificing his lunch breaks and extra time to tutor me
-
-Shoutout Tiffany Obi for help during Breaks
-
-- A special thanks to all classmates for their dedication and teamwork.
+- A special thanks to all classmates for their encouragement.
+- Adam Jessie for the Idea of diplaying Options in Capstone 1 (completely stole that idea this time around)
 - #FullStackFryers
 - #SigmaData
