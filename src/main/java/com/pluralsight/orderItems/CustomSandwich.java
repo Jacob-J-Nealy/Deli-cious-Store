@@ -38,13 +38,6 @@ public class CustomSandwich implements Priceable {
         return sandwichBuilder.toString();
     }
 
-    private void getBread() {
-    }
-
-    private void getToppings() {
-
-    }
-
     @Override
     public double calculatePrice() {
 

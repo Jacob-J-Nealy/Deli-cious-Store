@@ -82,20 +82,38 @@ public class UserInterface {
     }
     private void uiSandwichSelection() {
         int drinkSelectInput;
+        int sizeChoice = 0;
+        Bread breadChoice = null;
+        boolean isToasted = false;
+
 
         while (true) {
 
             // Sandwich Size Selection
+            System.out.println("__________________________________________________");
             System.out.println("\n     ---Sandwich Size Selection Screen---");
             System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
             System.out.println("\n|   4' Inch   |   8' Inch   |   12' Inch   |");
             System.out.print("Enter Number Here: ");
-            int sizeChoice = scanner.nextInt();
-            scanner.nextLine(); // scanner eater
-            switch (sizeChoice) {
-                case 4 -> sizeChoice = 4;
-                case 8 -> sizeChoice = 8;
-                case 12 -> sizeChoice = 12;
+
+            boolean sizeSelecting = true;
+            while (sizeSelecting) {
+            try {
+                sizeChoice = scanner.nextInt();
+                scanner.nextLine(); // scanner eater
+
+                switch (sizeChoice) {
+                    case 4, 8, 12 -> {
+                        System.out.println("✅ You Selected: " + sizeChoice + "' Inch Sandwich");
+                        sizeSelecting = false;
+                    }
+                    default -> {
+                        System.err.print("❌ Invalid Size. (Size Choices are 4', 8' or 12'): ");
+                    }
+                }
+            } catch (Exception e) {
+                System.err.println("Invalid Input. Enter a Number for Size Choice");
+            }
             }
             System.out.println("__________________________________________________");
 
@@ -105,15 +123,28 @@ public class UserInterface {
             System.out.println("⬇️ Please Enter a Number from the Options Below ⬇️");
             System.out.println("\n|   1-White   |   2-Wheat   |   3-Rye   |   4-Wrap   |");
             System.out.print("Enter Here: ");
-            int typeChoice = scanner.nextInt();
-            Bread breadChoice = null;
-            scanner.nextLine(); // scanner eater
-            switch (typeChoice) {
-                case 1 -> breadChoice = new Bread("White");
-                case 2 -> breadChoice = new Bread("Wheat");
-                case 3 -> breadChoice = new Bread("Rye"  );
-                case 4 -> breadChoice = new Bread("Wrap" );
-                default -> System.out.println("❌ Invalid Selection; Try Again.");
+
+            boolean breadSelecting = true;
+            while (breadSelecting) {
+                try {
+                    int typeChoice = scanner.nextInt();
+
+                    scanner.nextLine(); // scanner eater
+                    switch (typeChoice) {
+                        case 1 -> breadChoice = new Bread("White");
+                        case 2 -> breadChoice = new Bread("Wheat");
+                        case 3 -> breadChoice = new Bread("Rye");
+                        case 4 -> breadChoice = new Bread("Wrap");
+                        default -> System.err.print("❌ Invalid Selection; Try Again: ");
+                    }
+
+                    if (typeChoice == 1 || typeChoice == 2 || typeChoice == 3 || typeChoice == 4) {
+                        System.out.println("✅ You Selected: " + breadChoice + "Bread");
+                        breadSelecting = false;
+                    }
+                } catch (Exception e) {
+                    System.err.print("Invalid Bread Choice. Please choose from corresponding Numbers above: ");
+                }
             }
             System.out.println("__________________________________________________");
 
@@ -215,19 +246,25 @@ public class UserInterface {
             System.out.println("__________________________________________________");
 
             // Is Sandwich Toasted?
-            boolean isToasted;
+
             System.out.println("---Toasted?---");
             System.out.println("Y: yes");
             System.out.println("N: no");
 
+            boolean toastedSelecting = true;
             System.out.print("Enter Here: ");
-            String toastedChoice = scanner.nextLine();
+            while (toastedSelecting) {
+                String toastedChoice = scanner.nextLine();
 
-            isToasted = false;
-            if (toastedChoice.equalsIgnoreCase("Y")) {
-                isToasted = true;
-            } else if (toastedChoice.equalsIgnoreCase("N")) {
+
                 isToasted = false;
+                if (toastedChoice.equalsIgnoreCase("Y")) {
+                    isToasted = true; toastedSelecting = false;
+                } else if (toastedChoice.equalsIgnoreCase("N")) {
+                    isToasted = false; toastedSelecting = false;
+                } else {
+                    System.err.print("Invalid Toasted Input. (Please Enter Y or N for yes or No): ");
+                }
             }
 
             CustomSandwich sandwich = new CustomSandwich(sizeChoice, breadChoice, toppingsList, isToasted);
