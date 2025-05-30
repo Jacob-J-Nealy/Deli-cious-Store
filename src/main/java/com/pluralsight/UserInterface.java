@@ -5,6 +5,8 @@ import com.pluralsight.orderItems.CustomSandwich;
 import com.pluralsight.orderItems.Drink;
 import com.pluralsight.orderItems.customSandwichParts.Bread;
 import com.pluralsight.orderItems.customSandwichParts.Toppings;
+import com.pluralsight.orderItems.customSandwichParts.toppingsOptions.Cheese;
+import com.pluralsight.orderItems.customSandwichParts.toppingsOptions.Meat;
 import com.pluralsight.orderItems.customSandwichParts.toppingsOptions.RegularToppings;
 
 import java.util.*;
@@ -166,18 +168,18 @@ public class UserInterface {
             toppingsSelectionMap.put(10, new RegularToppings("Mushrooms"));
 
             // Meat
-            toppingsSelectionMap.put(11,"Steak");
-            toppingsSelectionMap.put(12,"Ham");
-            toppingsSelectionMap.put(13,"Salami");
-            toppingsSelectionMap.put(14,"Roast Beef");
-            toppingsSelectionMap.put(15,"Chicken");
-            toppingsSelectionMap.put(16,"Bacon");
+            toppingsSelectionMap.put(11, new Meat("Steak",      true));
+            toppingsSelectionMap.put(12, new Meat("Ham",        true));
+            toppingsSelectionMap.put(13, new Meat("Salami",     true));
+            toppingsSelectionMap.put(14, new Meat("Roast Beef", true));
+            toppingsSelectionMap.put(15, new Meat("Chicken",    true));
+            toppingsSelectionMap.put(16, new Meat("Bacon",      true));
 
             // Cheese
-            toppingsSelectionMap.put(17,"American Cheese");
-            toppingsSelectionMap.put(18,"Provolone Cheese");
-            toppingsSelectionMap.put(19,"Cheddar Cheese");
-            toppingsSelectionMap.put(20,"Swiss Cheese");
+            toppingsSelectionMap.put(17, new Cheese("American Cheese"));
+            toppingsSelectionMap.put(18, new Cheese("Provolone Cheese"));
+            toppingsSelectionMap.put(19, new Cheese("Cheddar Cheese"));
+            toppingsSelectionMap.put(20, new Cheese("Swiss Cheese"));
 
             //Sauce
             toppingsSelectionMap.put(21,"Mayo");
