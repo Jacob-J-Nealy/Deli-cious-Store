@@ -1,0 +1,19 @@
+-------- Your Order --------
+
+Custom Sandwich 8'
+White Bread | Toasted: true
+
+Toppings:
+- Bacon
+- Cheddar
+- Lettuce
+- Tomato
+- Ranch
+
+Total: $11.10
+
+Subtotal: $11.10
+Tax (6%): $0.67
+Total: $11.77
+Payment: $12.00
+Change Due: $0.23

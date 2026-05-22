@@ -1,0 +1,9 @@
+-------- Your Order --------
+
+Cheezos - $1.50
+
+Subtotal: $1.50
+Tax (6%): $0.09
+Total: $1.59
+Payment: $2.00
+Change Due: $0.41

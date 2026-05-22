@@ -1,0 +1,24 @@
+-------- Your Order --------
+
+Custom Sandwich 4'
+Wrap Bread | Toasted: true
+
+Toppings:
+- Lettuce
+- Provolone Cheese
+- Ketchup
+- Thousand Island
+- Roast Beef
+- Swiss Cheese
+
+Total: $9.05
+
+LARGE Bepsi - $3.00
+
+Sunrise Chips - $1.50
+
+Subtotal: $13.55
+Tax (6%): $0.81
+Total: $14.36
+Payment: $15.00
+Change Due: $0.64
